@@ -2,12 +2,10 @@
 
 <suite name="CHQ Automation Suite">
 
-    <test name="Login Test">
-
+    <test name="Operator Login Tests">
         <classes>
-            <class name="tests.LoginTest"/>
+            <class name="tests.TC01_Settings_Page"/>
         </classes>
-
     </test>
 
 </suite>

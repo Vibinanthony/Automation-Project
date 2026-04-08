@@ -1,46 +1,46 @@
-package tests;
+package tests; // Package name
 
-import base.DriverFactory;
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
-import pages.LoginPage;
-import utils.ConfigReader;
+import base.DriverFactory; // Import DriverFactory class
+import org.openqa.selenium.WebDriver; // Import WebDriver interface
+import org.testng.annotations.AfterMethod; // Import AfterMethod annotation
+import org.testng.annotations.BeforeMethod; // Import BeforeMethod annotation
+import org.testng.annotations.Test; // Import Test annotation
+import pages.LoginPage; // Import LoginPage class
+import utils.ConfigReader; // Import ConfigReader class
 
-public class LoginTest {
+public class LoginTest { // Login test class
 
-    WebDriver driver;
-    ConfigReader configReader;
-    LoginPage loginPage;
+    WebDriver driver; // Declare WebDriver variable
+    ConfigReader configReader; // Declare ConfigReader object
+    LoginPage loginPage; // Declare LoginPage object
 
-    @BeforeMethod
+    @BeforeMethod // This method runs before every test method
     public void setUp() {
 
-        driver = DriverFactory.initializeDriver();
-
-        configReader = new ConfigReader();
-        driver.get(configReader.getUrl());
-
-        loginPage = new LoginPage(driver);
+        driver = DriverFactory.initializeDriver(); // Launch browser and get driver object
+        configReader = new ConfigReader(); // Create ConfigReader object
+        driver.get(configReader.getUrl()); // Open URL from config.properties
+        loginPage = new LoginPage(driver); // Create LoginPage object and pass driver
     }
 
-    @Test
+    @Test // Actual test case
     public void verifyValidLogin() {
 
-        loginPage.login(
-                configReader.getUsername(),
-                configReader.getPassword()
+        loginPage.login( // Call login method from LoginPage class
+                configReader.getUsername(), // Read username from config.properties
+                configReader.getPassword() // Read password from config.properties
         );
 
-        System.out.println("Login Test Executed Successfully");
+        loginPage.clickherebutton(); // Click Here button after login
+        loginPage.verifyLogin(); // Verify login is successful
+        System.out.println("Login Test Executed Successfully"); // Print message in console
     }
 
-    @AfterMethod
+    @AfterMethod // This method runs after every test method
     public void tearDown() {
 
-        if (driver != null) {
-            driver.quit();
+        if (driver != null) { // Check if driver is not null
+            driver.quit(); // Close browser completely
         }
     }
 }

@@ -1,31 +1,39 @@
-package pages;
+package pages; // Package name
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
+import org.openqa.selenium.By; // Import By class to locate elements
+import org.openqa.selenium.WebDriver; // Import WebDriver interface
+import org.openqa.selenium.support.ui.ExpectedConditions; // Import ExpectedConditions for explicit wait
+import org.openqa.selenium.support.ui.WebDriverWait; // Import WebDriverWait class
+import org.testng.Assert; // Import Assert class for validation
 
-public class LoginPage {
+import java.time.Duration; // Import Duration class
 
-    WebDriver driver;
+public class LoginPage { // LoginPage class for handling login related actions
+    WebDriver driver; // Declare WebDriver variable
 
-    public LoginPage(WebDriver driver) {
-        this.driver = driver;
-    }
-    
-    public void login(String username, String password)
-    {
-        driver.findElement(By.id("Input_Username")).sendKeys(username);
-        driver.findElement(By.id("Input_Password")).sendKeys(password);
-        driver.findElement(By.id("login-submit")).click();
+    public LoginPage(WebDriver driver) { // Constructor to initialize driver
+        this.driver = driver; // Assign driver value
     }
 
-    public void verifyLogin()
-    {
-        String actualText = driver.getCurrentUrl();
-        Assert.assertEquals(actualText, "https://pwa.devconnecthq.live/home");
-        System.out.println("The login is successful");
+    public void login(String username, String password) { // Method for login action
+        driver.findElement(By.id("Input_Username")).sendKeys(username); // Enter username
+        driver.findElement(By.id("Input_Password")).sendKeys(password); // Enter password
+        driver.findElement(By.id("login-submit")).click(); // Click login button
     }
 
+    public void clickherebutton() { // Method to click "Here" button after login
 
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20)); // Create explicit wait object
+        wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Here"))).click(); // Wait until Here link is clickable and click
+        System.out.println("The Here button is clicked"); // Print message in console
+    }
 
+    public void verifyLogin() { // Method to verify login is successful
+
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20)); // Create explicit wait object
+        wait.until(ExpectedConditions.urlContains("https://pwa.devconnecthq.live/home")); // Wait until URL contains home page URL
+        String actualText = driver.getCurrentUrl(); // Get current URL after login
+        Assert.assertEquals(actualText, "https://pwa.devconnecthq.live/home"); // Verify actual URL matches expected URL
+        System.out.println("The login is successful"); // Print message in console
+    }
 }
