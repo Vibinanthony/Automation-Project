@@ -5,6 +5,8 @@
     <test name="Operator Login Tests">
         <classes>
             <class name="tests.TC01_Settings_Page"/>
+            <class name="tests.TC02_Assignment_Page"/>
+            <class name="tests.TC03_Group_Page"/>
         </classes>
     </test>
 

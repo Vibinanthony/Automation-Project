@@ -36,11 +36,11 @@ public class LoginTest { // Login test class
         System.out.println("Login Test Executed Successfully"); // Print message in console
     }
 
-    @AfterMethod // This method runs after every test method
-    public void tearDown() {
-
-        if (driver != null) { // Check if driver is not null
-            driver.quit(); // Close browser completely
-        }
-    }
+//    @AfterMethod // This method runs after every test method
+//    public void tearDown() {
+//
+//        if (driver != null) { // Check if driver is not null
+//            driver.quit(); // Close browser completely
+//        }
+//    }
 }
