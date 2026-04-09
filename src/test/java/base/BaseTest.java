@@ -28,11 +28,11 @@ public class BaseTest { // Parent class for all test classes
         loginPage.verifyLogin(); // Verify login is successful
     }
 
-//    @AfterTest // This method runs onces after the @Test method
-//    public void tearDown() {
-//
-//        if (driver != null) { // Check if driver is not null
-//            driver.quit(); // Close browser completely
-//        }
-//    }
+    @AfterTest // This method runs onces after the @Test method
+    public void tearDown() {
+
+        if (driver != null) { // Check if driver is not null
+            driver.quit(); // Close browser completely
+        }
+    }
 }
