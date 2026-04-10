@@ -1,6 +1,8 @@
 package tests;
 
 import base.BaseTest;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,6 +15,8 @@ import java.time.Duration;
 
 public class TC01_Settings_Page extends BaseTest {
 
+    private static final Logger log = LogManager.getLogger(TC01_Settings_Page.class);
+
     @Test
     public void Kiosk_Settings() throws InterruptedException, IOException {
 
@@ -20,14 +24,14 @@ public class TC01_Settings_Page extends BaseTest {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"hamburger\"]/div"))).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Setup']"))).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("kioskSettings"))).click();
-        System.out.println("Kiosk Settings Button is clicked");
+        log.info("Kiosk Settings Button is clicked");
 
         WebElement serialNumberInput = wait.until(ExpectedConditions.elementToBeClickable(
                 By.id("Manufacturer Serial Number")));
         serialNumberInput.clear();
         serialNumberInput.sendKeys("GCKDTYH59OY");
 
-        System.out.println("The S/N is passed");
+        log.info("The S/N is passed");
 
         By commandDropdownBy = By.xpath("//tr[contains(@class,'ant-table-row') and .//td[normalize-space()='GCKDTYH59OY']]//td[last()]//div[contains(@class,'ant-select-selector')]");
         By commandInputBy = By.xpath("//tr[contains(@class,'ant-table-row') and .//td[normalize-space()='GCKDTYH59OY']]//td[last()]//input[@role='combobox']");
@@ -37,8 +41,8 @@ public class TC01_Settings_Page extends BaseTest {
             try {
                 WebElement commandDropdown = wait.until(ExpectedConditions.presenceOfElementLocated(commandDropdownBy));
                 WebElement commandInput = wait.until(ExpectedConditions.presenceOfElementLocated(commandInputBy));
-                System.out.println("Command dropdown displayed: " + commandDropdown.isDisplayed());
-                System.out.println("Command dropdown enabled: " + commandDropdown.isEnabled());
+                log.info("Command dropdown displayed: " + commandDropdown.isDisplayed());
+                log.info("Command dropdown enabled: " + commandDropdown.isEnabled());
                 js.executeScript("arguments[0].scrollIntoView({block:'center'});", commandDropdown);
                 try {
                     commandDropdown.click();
@@ -63,14 +67,14 @@ public class TC01_Settings_Page extends BaseTest {
                     break;
                 }
             } catch (StaleElementReferenceException staleEx) {
-                System.out.println("Dropdown became stale, retrying... attempt " + attempt);
+                log.info("Dropdown became stale, retrying... attempt " + attempt);
             } catch (TimeoutException timeoutEx) {
-                System.out.println("Dropdown did not open, retrying... attempt " + attempt);
+                log.info("Dropdown did not open, retrying... attempt " + attempt);
             }
         }
         Assert.assertTrue(dropdownOpened, "Could not open Command dropdown.");
 
-        System.out.println("Command dropdown opened");
+        log.info("Command dropdown opened");
 
         // Exact option text from UI (see screenshot). Do not type in the combobox first — filtering can break selection.
         By uploadLogsBy = By.xpath("//div[contains(@class,'ant-select-dropdown') and not(contains(@class,'hidden'))]"
@@ -83,18 +87,18 @@ public class TC01_Settings_Page extends BaseTest {
             WebElement again = wait.until(ExpectedConditions.elementToBeClickable(uploadLogsBy));
             js.executeScript("arguments[0].click();", again);
         }
-        System.out.println("Upload logs option selected");
+        log.info("Upload logs option selected");
 
         WebElement yesButton = wait.until(ExpectedConditions.elementToBeClickable(
                 By.xpath("//div[contains(@class,'ant-modal-footer')]//button[1]//span[normalize-space()='Yes']")));
         yesButton.click();
-        System.out.println("Yes button clicked");
+        log.info("Yes button clicked");
         
         // Validation of the popup message
         WebElement popup_validation = wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//*[contains(text(),'UPLOAD-LOGS command sent successfully')]")));
         String popupMessage = popup_validation.getText();
-        System.out.println("Popup message is: " + popupMessage);
+        log.info("Popup message is: " + popupMessage);
         Assert.assertEquals(popupMessage, "UPLOAD-LOGS command sent successfully");
 
 

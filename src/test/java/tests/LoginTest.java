@@ -1,6 +1,8 @@
 package tests; // Package name
 
 import base.DriverFactory; // Import DriverFactory class
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver; // Import WebDriver interface
 import org.testng.annotations.AfterMethod; // Import AfterMethod annotation
 import org.testng.annotations.BeforeMethod; // Import BeforeMethod annotation
@@ -13,6 +15,7 @@ public class LoginTest { // Login test class
     WebDriver driver; // Declare WebDriver variable
     ConfigReader configReader; // Declare ConfigReader object
     LoginPage loginPage; // Declare LoginPage object
+    private static final Logger log = LogManager.getLogger(LoginTest.class);
 
     @BeforeMethod // This method runs before every test method
     public void setUp() {
@@ -33,7 +36,7 @@ public class LoginTest { // Login test class
 
         loginPage.clickherebutton(); // Click Here button after login
         loginPage.verifyLogin(); // Verify login is successful
-        System.out.println("Login Test Executed Successfully"); // Print message in console
+        log.info("Login Test Executed Successfully"); // Print message in console
     }
 
     @AfterMethod // This method runs after every test method

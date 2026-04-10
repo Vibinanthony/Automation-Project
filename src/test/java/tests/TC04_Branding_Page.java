@@ -1,6 +1,8 @@
 package tests;
 
 import base.BaseTest;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
@@ -14,6 +16,8 @@ import java.time.Duration;
 
     public class TC04_Branding_Page extends BaseTest {
 
+        private static final Logger log = LogManager.getLogger(TC04_Branding_Page.class);
+
         @Test
         public void TC04_Branding_page() {
 
@@ -23,17 +27,17 @@ import java.time.Duration;
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Setup']"))).click();
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("branding"))).click();
 
-            System.out.println("Kiosk Branding Button is clicked");
+            log.info("Kiosk Branding Button is clicked");
 
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("Manufacturer Serial Number"))).sendKeys("GCKDTYH59OY");
 
            // ===== getting the Branding name from the table and print on console
             String beforebrandingname = wait.until(ExpectedConditions.visibilityOfElementLocated(
                     By.xpath("(//tr[contains(@class,'ant-table-row')])[1]//td[7]//span"))).getText();
-            System.out.println("The Current Branding is: " + beforebrandingname);
+            log.info("The Current Branding is: " + beforebrandingname);
 
             wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='change-branding-btn']/div"))).click();
-            System.out.println("The Change Branding link has been clicked");
+            log.info("The Change Branding link has been clicked");
 
             if (beforebrandingname.equals("BistroToGo")) {
 
@@ -48,7 +52,7 @@ import java.time.Duration;
                 JavascriptExecutor js = (JavascriptExecutor) driver;
                 js.executeScript("arguments[0].click();", cokeOption);
 
-                System.out.println("The Branding has been changed to Coke");
+                log.info("The Branding has been changed to Coke");
 
             } else {
 
@@ -63,16 +67,16 @@ import java.time.Duration;
                 JavascriptExecutor js = (JavascriptExecutor) driver;
                 js.executeScript("arguments[0].click();", bistroOption);
 
-                System.out.println("The Branding has been changed to BistroToGo");
+                log.info("The Branding has been changed to BistroToGo");
             }
 
 
             wait.until(ExpectedConditions.elementToBeClickable(By.id("save-branding-btn"))).click();
-            System.out.println("The Save Button has been Clicked");
+            log.info("The Save Button has been Clicked");
 
             // ===== getting the Branding name from the table and print on console
             String afterbrandingname = driver.findElement(By.xpath("//*[@id=\"rc-tabs-0-panel-branding\"]/main/div/div/main/div[2]/div/div/div/div/div/div/div[2]/table/tbody/tr[2]/td[7]/span")).getText();
-            System.out.println("The Current Branding is: " + afterbrandingname);
+            log.info("The Current Branding is: " + afterbrandingname);
 
         }
     }
