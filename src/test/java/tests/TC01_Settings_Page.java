@@ -20,6 +20,7 @@ public class TC01_Settings_Page extends BaseTest {
     @Test
     public void Kiosk_Settings() throws InterruptedException, IOException {
 
+        loginAsGlobalUser();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));   // Explicit Wait
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"hamburger\"]/div"))).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Setup']"))).click();

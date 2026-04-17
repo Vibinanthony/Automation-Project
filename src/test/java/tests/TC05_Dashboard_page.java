@@ -19,6 +19,7 @@ public class TC05_Dashboard_page extends BaseTest {
     @Test
     public void TC05_Dashboard_page() throws InterruptedException {
 
+        loginAsGlobalUser();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"hamburger\"]/div"))).click();

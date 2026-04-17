@@ -21,6 +21,7 @@ import java.time.Duration;
         @Test
         public void TC04_Branding_page() {
 
+            loginAsGlobalUser();
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
 
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"hamburger\"]/div"))).click();
