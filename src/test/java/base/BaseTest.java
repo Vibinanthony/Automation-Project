@@ -18,15 +18,27 @@ public class BaseTest { // Parent class for all test classes
         configReader = new ConfigReader(); // Create object of ConfigReader class
         driver.get(configReader.getUrl()); // Open application URL from config.properties
         loginPage = new LoginPage(driver); // Create LoginPage object and pass driver
+        }
 
-        loginPage.login( // Call login method from LoginPage class
-                configReader.getUsername(), // Read username from config.properties
-                configReader.getPassword() // Read password from config.properties
-        );
+            public void loginAsGlobalUser() {
 
-        loginPage.clickherebutton(); // Click "Click Here" button after login
-        loginPage.verifyLogin(); // Verify login is successful
-    }
+                loginPage.login(
+                        configReader.getUsername(),
+                        configReader.getPassword()
+                );
+                loginPage.clickherebutton();
+                loginPage.verifyLogin();
+            }
+
+            public void loginAsOperatorUser() {
+
+                loginPage.login(
+                        configReader.getOperatorUsername(),
+                        configReader.getOperatorPassword()
+                );
+                loginPage.clickherebutton();
+                loginPage.verifyLogin();
+            }
 
     @AfterTest // This method runs onces after the @Test method
     public void tearDown() {
