@@ -9,6 +9,9 @@ import org.testng.annotations.BeforeMethod; // Import BeforeMethod annotation
 import org.testng.annotations.Test; // Import Test annotation
 import pages.LoginPage; // Import LoginPage class
 import utils.ConfigReader; // Import ConfigReader class
+import org.openqa.selenium.WebDriver;
+import pages.LoginPage;
+import utils.ConfigReader;
 
 public class LoginTest { // Login test class
 
