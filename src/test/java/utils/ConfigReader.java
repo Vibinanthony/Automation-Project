@@ -35,4 +35,12 @@ public class ConfigReader { // Class used to read config.properties file
     public String getPassword() { // Method to get password value
         return properties.getProperty("password"); // Return password value from config.properties
     }
+
+    public String getOperatorUsername() {
+        return properties.getProperty("OperatorUsername");
+    }
+
+    public String getOperatorPassword() {
+        return properties.getProperty("OperatorPassword");
+    }
 }
