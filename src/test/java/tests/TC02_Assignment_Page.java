@@ -21,6 +21,7 @@ public class TC02_Assignment_Page extends BaseTest {
     public void Assigning_operator() throws InterruptedException, IOException {
 
         log.info("############### Starting the 1st validation ################");
+        loginAsGlobalUser();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));   // Explicit Wait
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"hamburger\"]/div"))).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Setup']"))).click();
@@ -65,6 +66,7 @@ public class TC02_Assignment_Page extends BaseTest {
     public void Validate_Assigned_Operator(){
 
         log.info("############### Starting the 2nd validation #################");
+        loginAsGlobalUser();
         WebDriverWait mywait = new WebDriverWait(driver, Duration.ofSeconds(30));   // Explicit Wait
         mywait.until(ExpectedConditions.visibilityOfElementLocated(By.id("Manufacturer Serial Number"))).sendKeys("GCKDTYH59OY");
         log.info("The S/N has been passed on the Search Box ");

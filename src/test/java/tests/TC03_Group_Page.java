@@ -22,6 +22,7 @@ public class TC03_Group_Page extends BaseTest {
     @Test
     public void TC03_Group_page() {
 
+        loginAsGlobalUser();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));   // Explicit Wait
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"hamburger\"]/div"))).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Setup']"))).click();
