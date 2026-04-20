@@ -1,0 +1,404 @@
+15:07:58.875 [main] INFO  tests.TC05_Dashboard_page - Kiosk Dashboard Button is clicked
+15:07:59.230 [main] INFO  tests.TC05_Dashboard_page - The S/N is passed on the box
+15:07:59.230 [main] INFO  tests.TC05_Dashboard_page -  ############# Getting the Field Data from the table and Printing on console ###############
+15:07:59.981 [main] INFO  tests.TC05_Dashboard_page - Operator Name: Food Express
+15:08:00.032 [main] INFO  tests.TC05_Dashboard_page - Branch Name: Food Express Carolinas
+15:08:00.072 [main] INFO  tests.TC05_Dashboard_page - Customer Name: -
+15:08:00.113 [main] INFO  tests.TC05_Dashboard_page - Point Of Sale: -
+15:08:00.148 [main] INFO  tests.TC05_Dashboard_page - Loyalty S/N: GCFOODEXPRNC0295
+15:08:00.193 [main] INFO  tests.TC05_Dashboard_page - Manufacturing S/N: GCKHVKOOEA4
+15:08:00.227 [main] INFO  tests.TC05_Dashboard_page - LYNK S/N: -
+15:08:00.254 [main] INFO  tests.TC05_Dashboard_page - Installed MM Version: 6.4
+15:08:00.283 [main] INFO  tests.TC05_Dashboard_page - Bill Acceptor Version: -
+15:08:00.310 [main] INFO  tests.TC05_Dashboard_page - InHand S/N: -
+15:08:00.341 [main] INFO  tests.TC05_Dashboard_page - InHand Data Usage: -
+15:08:00.386 [main] INFO  tests.TC05_Dashboard_page - Signal Strength: -
+15:08:00.420 [main] INFO  tests.TC05_Dashboard_page - VDI Salve Mode: No
+15:08:00.437 [main] INFO  tests.TC05_Dashboard_page - The table is scrolled 500px to the right
+15:08:00.477 [main] INFO  tests.TC05_Dashboard_page - Total Reboot: -
+15:08:00.515 [main] INFO  tests.TC05_Dashboard_page - Discount Type: Amount
+15:08:00.624 [main] INFO  tests.TC05_Dashboard_page - Discount: $ 0.05
+15:08:00.665 [main] INFO  tests.TC05_Dashboard_page - Last product Sync: 04/10/2026 12:01:01
+15:08:00.718 [main] INFO  tests.TC05_Dashboard_page - Last HeartBeat: No
+15:08:00.752 [main] INFO  tests.TC05_Dashboard_page - Last HeartBeat: 04/10/2026 12:00:32
+15:08:00.796 [main] INFO  tests.TC05_Dashboard_page - The table is scrolled 500px to the right by second time
+15:08:00.849 [main] INFO  tests.TC05_Dashboard_page - Last Sale Amount: $ 2.00
+15:08:00.901 [main] INFO  tests.TC05_Dashboard_page - Last Command Sent: UPLOAD-LOGS
+15:08:00.937 [main] INFO  tests.TC05_Dashboard_page - Last Sale DateTime: 04/10/2026 10:13:41
+15:08:00.972 [main] INFO  tests.TC05_Dashboard_page - last Collected Amount: $ 8.00
+15:08:00.994 [main] INFO  tests.TC05_Dashboard_page - The table is scrolled 1500px to the right by third time
+15:08:01.032 [main] INFO  tests.TC05_Dashboard_page - Last Collected Date: 04/09/2026 11:57:57
+15:08:01.066 [main] INFO  tests.TC05_Dashboard_page - Daily sales Amount: $ 3.00
+15:08:01.108 [main] INFO  tests.TC05_Dashboard_page - Weekly sales: $ 2040.00
+15:08:01.170 [main] INFO  tests.TC05_Dashboard_page - Average Daily Sales: $ 451.44
+15:11:09.160 [main] INFO  tests.TC05_Dashboard_page - Kiosk Dashboard Button is clicked
+15:11:09.594 [main] INFO  tests.TC05_Dashboard_page - The S/N is passed on the box
+15:11:09.594 [main] INFO  tests.TC05_Dashboard_page -  ############# Getting the Field Data from the table and Printing on console ###############
+15:11:11.432 [main] INFO  tests.TC05_Dashboard_page - Operator Name: Food Express
+15:11:11.469 [main] INFO  tests.TC05_Dashboard_page - Branch Name: Food Express Carolinas
+15:11:11.506 [main] INFO  tests.TC05_Dashboard_page - Customer Name: Vibin Testing [Vibin Testing]
+15:11:11.539 [main] INFO  tests.TC05_Dashboard_page - Point Of Sale: Vibin Testing Market
+15:11:11.572 [main] INFO  tests.TC05_Dashboard_page - Loyalty S/N: GCFOODEXPRNC000870
+15:11:11.609 [main] INFO  tests.TC05_Dashboard_page - Manufacturing S/N: GCKDTYH59OY
+15:11:11.640 [main] INFO  tests.TC05_Dashboard_page - LYNK S/N: 000512193403532
+15:11:11.674 [main] INFO  tests.TC05_Dashboard_page - Installed MM Version: DEV1.7.05a
+15:11:11.722 [main] INFO  tests.TC05_Dashboard_page - Bill Acceptor Version: 18
+15:11:11.757 [main] INFO  tests.TC05_Dashboard_page - InHand S/N: RF3022212101960
+15:11:11.803 [main] INFO  tests.TC05_Dashboard_page - InHand Data Usage: 0.00 GB
+15:11:11.847 [main] INFO  tests.TC05_Dashboard_page - Signal Strength: 0 (No Signal)
+15:11:11.899 [main] INFO  tests.TC05_Dashboard_page - VDI Salve Mode: No
+15:11:11.928 [main] INFO  tests.TC05_Dashboard_page - The table is scrolled 500px to the right
+15:11:11.976 [main] INFO  tests.TC05_Dashboard_page - Total Reboot: 3
+15:11:12.017 [main] INFO  tests.TC05_Dashboard_page - Discount Type: Amount
+15:11:12.075 [main] INFO  tests.TC05_Dashboard_page - Discount: $ 0.05
+15:11:12.125 [main] INFO  tests.TC05_Dashboard_page - Last product Sync: 04/10/2026 12:01:01
+15:11:12.180 [main] INFO  tests.TC05_Dashboard_page - Last HeartBeat: No
+15:11:12.220 [main] INFO  tests.TC05_Dashboard_page - Last HeartBeat: 04/10/2026 12:00:32
+15:11:12.244 [main] INFO  tests.TC05_Dashboard_page - The table is scrolled 500px to the right by second time
+15:11:12.287 [main] INFO  tests.TC05_Dashboard_page - Last Sale Amount: $ 2.00
+15:11:12.328 [main] INFO  tests.TC05_Dashboard_page - Last Command Sent: UPLOAD-LOGS
+15:11:12.370 [main] INFO  tests.TC05_Dashboard_page - Last Sale DateTime: 04/10/2026 10:13:41
+15:11:12.409 [main] INFO  tests.TC05_Dashboard_page - last Collected Amount: $ 8.00
+15:11:12.435 [main] INFO  tests.TC05_Dashboard_page - The table is scrolled 1500px to the right by third time
+15:11:12.474 [main] INFO  tests.TC05_Dashboard_page - Last Collected Date: 04/09/2026 11:57:57
+15:11:12.512 [main] INFO  tests.TC05_Dashboard_page - Daily sales Amount: $ 3.00
+15:11:12.544 [main] INFO  tests.TC05_Dashboard_page - Weekly sales: $ 2040.00
+15:11:12.595 [main] INFO  tests.TC05_Dashboard_page - Average Daily Sales: $ 451.44
+15:44:48.805 [main] INFO  tests.TC01_Settings_Page - Kiosk Settings Button is clicked
+15:44:55.593 [main] INFO  tests.TC01_Settings_Page - The S/N is passed
+15:44:56.238 [main] INFO  tests.TC01_Settings_Page - Command dropdown displayed: true
+15:44:56.251 [main] INFO  tests.TC01_Settings_Page - Command dropdown enabled: true
+15:44:56.408 [main] INFO  tests.TC01_Settings_Page - Command dropdown opened
+15:44:57.264 [main] INFO  tests.TC01_Settings_Page - Upload logs option selected
+15:44:57.928 [main] INFO  tests.TC01_Settings_Page - Yes button clicked
+15:44:59.124 [main] INFO  tests.TC01_Settings_Page - Popup message is: UPLOAD-LOGS command sent successfully
+15:44:59.132 [main] INFO  tests.TC02_Assignment_Page - ############### Starting the 1st validation ################
+15:45:47.617 [main] INFO  tests.TC01_Settings_Page - Kiosk Settings Button is clicked
+15:45:55.840 [main] INFO  tests.TC01_Settings_Page - The S/N is passed
+15:45:56.493 [main] INFO  tests.TC01_Settings_Page - Command dropdown displayed: true
+15:45:56.508 [main] INFO  tests.TC01_Settings_Page - Command dropdown enabled: true
+15:45:56.645 [main] INFO  tests.TC01_Settings_Page - Command dropdown opened
+15:45:57.520 [main] INFO  tests.TC01_Settings_Page - Upload logs option selected
+15:45:58.172 [main] INFO  tests.TC01_Settings_Page - Yes button clicked
+15:45:59.360 [main] INFO  tests.TC01_Settings_Page - Popup message is: UPLOAD-LOGS command sent successfully
+15:45:59.368 [main] INFO  tests.TC02_Assignment_Page - ############### Starting the 1st validation ################
+10:49:13.929 [main] INFO  tests.Operator_LoginTest - Login Test Executed Successfully
+10:14:36.211 [main] INFO  tests.Operator_LoginTest - Browser launched successfully
+10:14:38.100 [main] INFO  tests.Operator_LoginTest - Browser closed successfully
+10:14:55.048 [main] INFO  tests.Operator_LoginTest - Browser launched successfully
+10:14:56.938 [main] INFO  tests.Operator_LoginTest - Browser closed successfully
+10:17:14.007 [main] INFO  tests.Operator_LoginTest - Browser launched successfully
+10:17:15.751 [main] INFO  tests.Operator_LoginTest - Browser closed successfully
+10:21:50.906 [main] INFO  tests.Operator_LoginTest - Browser launched successfully
+10:21:51.436 [main] INFO  tests.Operator_LoginTest - Browser closed successfully
+10:24:32.390 [main] INFO  tests.Operator_LoginTest - Browser launched successfully
+10:24:38.778 [main] INFO  tests.Operator_LoginTest - Browser closed successfully
+10:24:56.219 [main] INFO  tests.Operator_LoginTest - Browser launched successfully
+10:25:04.040 [main] INFO  tests.Operator_LoginTest - Operator Login Test Executed Successfully
+10:25:04.342 [main] INFO  tests.Operator_LoginTest - Browser closed successfully
+10:57:49.211 [main] INFO  tests.TC01_Settings_Page - Kiosk Settings Button is clicked
+10:58:00.239 [main] INFO  tests.TC01_Settings_Page - The S/N is passed
+10:58:00.332 [main] INFO  tests.TC01_Settings_Page - Command dropdown displayed: true
+10:58:00.355 [main] INFO  tests.TC01_Settings_Page - Command dropdown enabled: true
+10:58:00.664 [main] INFO  tests.TC01_Settings_Page - Command dropdown opened
+10:58:01.366 [main] INFO  tests.TC01_Settings_Page - Upload logs option selected
+10:58:02.172 [main] INFO  tests.TC01_Settings_Page - Yes button clicked
+10:58:04.211 [main] INFO  tests.TC01_Settings_Page - Popup message is: UPLOAD-LOGS command sent successfully
+10:59:38.223 [main] INFO  tests.TC06_Asset_Page - ############### Starting the 1st validation ################
+11:19:05.900 [main] INFO  tests.TC06_Asset_Page - ############### Starting the 1st validation ################
+11:19:42.347 [main] INFO  tests.TC06_Asset_Page - ############### Starting the 1st validation ################
+11:19:51.330 [main] INFO  tests.TC06_Asset_Page - Kiosk Asset Button is clicked
+11:20:35.994 [main] INFO  tests.TC06_Asset_Page - ############### Starting the 1st validation ################
+11:20:45.703 [main] INFO  tests.TC06_Asset_Page - Kiosk Asset Button is clicked
+12:14:31.889 [main] INFO  tests.TC06_Asset_Page - ############### Starting the 1st validation ################
+12:14:40.923 [main] INFO  tests.TC06_Asset_Page - Kiosk Asset Button is clicked
+12:14:42.488 [main] INFO  tests.TC06_Asset_Page - The Manufacturer S/N is passed on the box
+12:14:44.155 [main] INFO  tests.TC06_Asset_Page - The Kiosk Info tab has been opened
+12:24:29.477 [main] INFO  tests.TC06_Asset_Page - ############### Starting the 2nd validation ################
+12:24:38.091 [main] INFO  tests.TC06_Asset_Page -  ############# Getting the Field Data from the table and Printing on console ###############
+12:24:59.620 [main] INFO  tests.TC06_Asset_Page - ############### Starting the 1st validation ################
+12:25:09.155 [main] INFO  tests.TC06_Asset_Page - Kiosk Asset Button is clicked
+12:25:10.894 [main] INFO  tests.TC06_Asset_Page - The Manufacturer S/N is passed on the box
+12:25:12.502 [main] INFO  tests.TC06_Asset_Page - The Kiosk Info tab has been opened
+12:25:12.509 [main] INFO  tests.TC06_Asset_Page - ############### Starting the 2nd validation ################
+12:25:43.406 [main] INFO  tests.TC06_Asset_Page - ############### Starting the 1st validation ################
+12:25:52.360 [main] INFO  tests.TC06_Asset_Page - Kiosk Asset Button is clicked
+12:25:55.872 [main] INFO  tests.TC06_Asset_Page - The Manufacturer S/N is passed on the box
+12:25:57.455 [main] INFO  tests.TC06_Asset_Page - The Kiosk Info tab has been opened
+12:25:57.461 [main] INFO  tests.TC06_Asset_Page - ############### Starting the 2nd validation ################
+12:25:57.461 [main] INFO  tests.TC06_Asset_Page -  ############# Getting the Field Data from the table and Printing on console ###############
+12:25:59.162 [main] INFO  tests.TC06_Asset_Page - Kiosk Status Active : No
+12:41:20.437 [main] INFO  tests.TC06_Asset_Page - ############### Starting the 1st validation ################
+12:41:29.961 [main] INFO  tests.TC06_Asset_Page - Kiosk Asset Button is clicked
+12:41:31.763 [main] INFO  tests.TC06_Asset_Page - The Manufacturer S/N is passed on the box
+12:41:33.692 [main] INFO  tests.TC06_Asset_Page - The Kiosk Info tab has been opened
+12:41:33.701 [main] INFO  tests.TC06_Asset_Page - ############### Starting the 2nd validation & Getting the Field Data from the table and Printing ################
+12:41:34.822 [main] INFO  tests.TC06_Asset_Page - Kiosk Status Active : No
+12:41:35.638 [main] INFO  tests.TC06_Asset_Page - Loyalty S/N : GCFOODEXPRNC000916
+12:41:35.678 [main] INFO  tests.TC06_Asset_Page - Brand Name : BistroToGo
+12:41:35.722 [main] INFO  tests.TC06_Asset_Page - Kiosk Group Name : Vibin
+12:41:35.760 [main] INFO  tests.TC06_Asset_Page - InHand Data Usage : 0.00 GB
+12:41:35.821 [main] INFO  tests.TC06_Asset_Page - Kiosk Name : GCFOODEXPRNC000916
+12:41:35.864 [main] INFO  tests.TC06_Asset_Page - Mac Address : 0x2ccf672d0e44
+12:41:35.928 [main] INFO  tests.TC06_Asset_Page - Installed MM version : DEV1.7.06
+12:41:35.966 [main] INFO  tests.TC06_Asset_Page - InHand S/N : -
+12:41:36.002 [main] INFO  tests.TC06_Asset_Page - Time Zone : (UTC-05:00) Eastern Time (New York)
+12:41:36.042 [main] INFO  tests.TC06_Asset_Page - Kiosk S/N : GCKDTYH59OY
+12:41:36.077 [main] INFO  tests.TC06_Asset_Page - Pi Model : Raspberry Pi 5
+12:41:36.118 [main] INFO  tests.TC06_Asset_Page - Installed OS Version : 12.11
+12:41:36.166 [main] INFO  tests.TC06_Asset_Page - Signal Strength : 0 (No Signal)
+12:48:15.065 [main] INFO  tests.TC06_Asset_Page - ############### Starting the 1st validation ################
+12:48:24.909 [main] INFO  tests.TC06_Asset_Page - Kiosk Asset Button is clicked
+12:48:27.381 [main] INFO  tests.TC06_Asset_Page - The Manufacturer S/N is passed on the box
+12:48:29.672 [main] INFO  tests.TC06_Asset_Page - The Kiosk Info tab has been opened
+12:48:29.681 [main] INFO  tests.TC06_Asset_Page - ############### Starting the 2nd validation & Getting the Field Data from the table and Printing ################
+12:48:30.789 [main] INFO  tests.TC06_Asset_Page - Kiosk Status Active : No
+12:48:31.649 [main] INFO  tests.TC06_Asset_Page - Loyalty S/N : GCFOODEXPRNC000916
+12:48:31.737 [main] INFO  tests.TC06_Asset_Page - Brand Name : BistroToGo
+12:48:31.814 [main] INFO  tests.TC06_Asset_Page - Kiosk Group Name : Vibin
+12:48:31.880 [main] INFO  tests.TC06_Asset_Page - InHand Data Usage : 0.00 GB
+12:48:31.945 [main] INFO  tests.TC06_Asset_Page - Kiosk Name : GCFOODEXPRNC000916
+12:48:31.989 [main] INFO  tests.TC06_Asset_Page - Mac Address : 0x2ccf672d0e44
+12:48:32.026 [main] INFO  tests.TC06_Asset_Page - Installed MM version : DEV1.7.06
+12:48:32.080 [main] INFO  tests.TC06_Asset_Page - InHand S/N : -
+12:48:32.108 [main] INFO  tests.TC06_Asset_Page - Time Zone : (UTC-05:00) Eastern Time (New York)
+12:48:32.133 [main] INFO  tests.TC06_Asset_Page - Kiosk S/N : GCKDTYH59OY
+12:48:32.163 [main] INFO  tests.TC06_Asset_Page - Pi Model : Raspberry Pi 5
+12:48:32.196 [main] INFO  tests.TC06_Asset_Page - Installed OS Version : 12.11
+12:48:32.230 [main] INFO  tests.TC06_Asset_Page - Signal Strength : 0 (No Signal)
+12:48:32.232 [main] INFO  tests.TC06_Asset_Page - ############### Starting the 3rd validation & Getting the Misc Info Data from the table and Printing ################
+12:48:32.270 [main] INFO  tests.TC06_Asset_Page - Collection Time : 04/15/2026 14:58:34
+12:48:32.314 [main] INFO  tests.TC06_Asset_Page - Total reboot count : 1
+12:48:32.354 [main] INFO  tests.TC06_Asset_Page - Service Flag Status : No
+12:48:32.389 [main] INFO  tests.TC06_Asset_Page - Heartbeat Timestamp : 1
+12:48:32.429 [main] INFO  tests.TC06_Asset_Page - Market Provider : GC Market
+12:58:21.357 [main] INFO  tests.TC07_Kiosk_Info_Page - Kiosk Asset Button is clicked
+12:58:22.924 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+12:58:24.628 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+14:05:27.325 [main] INFO  tests.TC07_Kiosk_Info_Page - Kiosk Asset Button is clicked
+14:05:28.816 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+14:05:30.618 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+14:07:55.978 [main] INFO  tests.TC07_Kiosk_Info_Page - Kiosk Asset Button is clicked
+14:07:57.690 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+14:07:59.299 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+14:08:53.014 [main] INFO  tests.TC07_Kiosk_Info_Page - Kiosk Asset Button is clicked
+14:08:54.529 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+14:08:56.506 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+14:10:18.194 [main] INFO  tests.TC07_Kiosk_Info_Page - Kiosk Asset Button is clicked
+14:10:19.872 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+14:10:21.953 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+14:19:06.445 [main] INFO  tests.TC07_Kiosk_Info_Page - Kiosk Asset Button is clicked
+14:19:08.063 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+14:19:09.932 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+14:19:11.637 [main] INFO  tests.TC07_Kiosk_Info_Page - Brand Name : BistroToGo
+14:19:12.176 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+14:19:12.220 [main] INFO  tests.TC07_Kiosk_Info_Page - Brand Name After Selecting the dropdown : BistroToGo
+14:22:35.564 [main] INFO  tests.TC07_Kiosk_Info_Page - Kiosk Asset Button is clicked
+14:22:41.560 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+14:22:43.167 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+14:22:45.470 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+14:23:44.615 [main] INFO  tests.TC07_Kiosk_Info_Page - Kiosk Asset Button is clicked
+14:23:46.151 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+14:23:48.189 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+14:23:50.299 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+14:26:25.326 [main] INFO  tests.TC07_Kiosk_Info_Page - Kiosk Asset Button is clicked
+14:26:30.493 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+14:26:32.315 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+14:26:34.408 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+14:27:19.390 [main] INFO  tests.TC07_Kiosk_Info_Page - Kiosk Asset Button is clicked
+14:27:20.865 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+14:27:22.496 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+14:27:24.811 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+14:28:20.040 [main] INFO  tests.TC07_Kiosk_Info_Page - Kiosk Asset Button is clicked
+14:28:22.443 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+14:28:24.914 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+14:28:27.602 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+14:30:19.652 [main] INFO  tests.TC07_Kiosk_Info_Page - Kiosk Asset Button is clicked
+14:30:21.162 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+14:30:23.093 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+14:30:24.933 [main] INFO  tests.TC07_Kiosk_Info_Page - Brand Name : BistroToGo
+14:30:25.528 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+14:34:10.135 [main] INFO  tests.TC07_Kiosk_Info_Page - Kiosk Asset Button is clicked
+14:34:12.159 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+14:34:14.506 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+14:34:16.601 [main] INFO  tests.TC07_Kiosk_Info_Page - Brand Name : BistroToGo
+14:34:17.685 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+14:45:27.570 [main] INFO  tests.TC07_Kiosk_Info_Page - Kiosk Asset Button is clicked
+14:45:31.698 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+14:45:34.126 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+14:45:37.029 [main] INFO  tests.TC07_Kiosk_Info_Page - Brand Name : BistroToGo
+14:45:37.731 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+14:46:09.046 [main] INFO  tests.TC07_Kiosk_Info_Page - Current Security pin : 
+14:49:56.761 [main] INFO  tests.TC07_Kiosk_Info_Page - ############### Starting the validation of Security Pin ################
+14:51:20.767 [main] INFO  tests.TC07_Kiosk_Info_Page - Kiosk Asset Button is clicked
+14:51:25.227 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+14:51:27.041 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+14:51:28.744 [main] INFO  tests.TC07_Kiosk_Info_Page - Brand Name : BistroToGo
+14:51:29.546 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+14:51:31.266 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+14:51:31.277 [main] INFO  tests.TC07_Kiosk_Info_Page - ############### Starting the validation of Security Pin ################
+14:51:31.345 [main] INFO  tests.TC07_Kiosk_Info_Page - Current Security pin : 1122
+14:51:31.889 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+14:51:31.928 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+14:52:21.987 [main] INFO  tests.TC07_Kiosk_Info_Page - Kiosk Asset Button is clicked
+14:52:23.509 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+14:52:25.502 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+14:52:27.153 [main] INFO  tests.TC07_Kiosk_Info_Page - Brand Name : InReach
+14:52:27.843 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+14:52:28.886 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+14:58:17.750 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+14:58:19.628 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+14:58:21.677 [main] INFO  tests.TC07_Kiosk_Info_Page - Brand Name : BistroToGo
+14:58:22.747 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+14:58:24.298 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+14:58:24.304 [main] INFO  tests.TC07_Kiosk_Info_Page - ############### Starting the validation of Security Pin ################
+14:58:24.407 [main] INFO  tests.TC07_Kiosk_Info_Page - Current Security pin : 1122
+14:58:25.012 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+14:58:25.074 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+15:13:39.378 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+15:13:41.163 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+15:13:44.099 [main] INFO  tests.TC07_Kiosk_Info_Page - Brand Name : InReach
+15:13:44.875 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+15:13:46.410 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+15:13:46.419 [main] INFO  tests.TC07_Kiosk_Info_Page - ############### Starting the validation of Security Pin ################
+15:13:46.524 [main] INFO  tests.TC07_Kiosk_Info_Page - Current Security pin : 1122
+15:13:46.980 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+15:13:47.017 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+15:14:59.562 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+15:15:01.364 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+15:15:03.185 [main] INFO  tests.TC07_Kiosk_Info_Page - Brand Name : BistroToGo
+15:15:03.807 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+15:15:17.764 [main] INFO  tests.TC07_Kiosk_Info_Page - ############### Starting the validation of Security Pin ################
+15:15:38.371 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+15:15:40.018 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+15:15:41.681 [main] INFO  tests.TC07_Kiosk_Info_Page - Brand Name : BistroToGo
+15:15:42.400 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+15:15:43.973 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+15:15:43.988 [main] INFO  tests.TC07_Kiosk_Info_Page - ############### Starting the validation of Security Pin ################
+15:15:44.090 [main] INFO  tests.TC07_Kiosk_Info_Page - Current Security pin : 1122
+15:15:44.594 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+15:15:44.648 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+15:15:44.741 [main] INFO  tests.TC07_Kiosk_Info_Page - Current TD Settings: Disable
+15:15:46.191 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+15:15:46.228 [main] INFO  tests.TC07_Kiosk_Info_Page - Current TD Settings: Enable
+15:15:46.257 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+15:22:59.487 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+15:23:01.046 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+15:23:03.691 [main] INFO  tests.TC07_Kiosk_Info_Page - Brand Name : InReach
+15:23:04.471 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+15:23:06.058 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+15:23:06.090 [main] INFO  tests.TC07_Kiosk_Info_Page - ############### Starting the validation of Security Pin ################
+15:23:06.200 [main] INFO  tests.TC07_Kiosk_Info_Page - Current Security pin : 1122
+15:23:06.726 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+15:23:06.773 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+15:23:06.886 [main] INFO  tests.TC07_Kiosk_Info_Page - Current TD Settings: Enable
+15:23:08.309 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+15:23:08.346 [main] INFO  tests.TC07_Kiosk_Info_Page - Current TD Settings: Disable
+15:23:08.378 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+15:23:54.797 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+15:23:56.368 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+15:23:58.135 [main] INFO  tests.TC07_Kiosk_Info_Page - Brand Name : BistroToGo
+15:23:58.778 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+15:24:00.243 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+15:24:00.266 [main] INFO  tests.TC07_Kiosk_Info_Page - ############### Starting the validation of Security Pin ################
+15:24:00.359 [main] INFO  tests.TC07_Kiosk_Info_Page - Current Security pin : 1122
+15:24:00.877 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+15:24:00.922 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+15:24:01.062 [main] INFO  tests.TC07_Kiosk_Info_Page - Current TD Settings: Disable
+15:24:02.326 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+15:24:02.358 [main] INFO  tests.TC07_Kiosk_Info_Page - Current TD Settings: Enable
+15:24:02.391 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+15:28:56.168 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+15:28:58.533 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+15:29:00.568 [main] INFO  tests.TC07_Kiosk_Info_Page - Brand Name : InReach
+15:29:01.673 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+15:29:02.747 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+15:29:05.764 [main] INFO  tests.TC07_Kiosk_Info_Page - ############### Starting the validation of Security Pin ################
+15:29:05.861 [main] INFO  tests.TC07_Kiosk_Info_Page - Current Security pin : 1122
+15:29:06.104 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+15:29:06.152 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+15:29:09.318 [main] INFO  tests.TC07_Kiosk_Info_Page - Current TD Settings: Enable
+15:29:10.138 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+15:29:10.240 [main] INFO  tests.TC07_Kiosk_Info_Page - Current TD Settings: Disable
+15:29:10.287 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+15:34:09.425 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+15:34:11.010 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+15:34:12.724 [main] INFO  tests.TC07_Kiosk_Info_Page - Brand Name : BistroToGo
+15:34:13.482 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+15:34:15.083 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+15:34:18.091 [main] INFO  tests.TC07_Kiosk_Info_Page - ############### Starting the validation of Security Pin ################
+15:34:18.151 [main] INFO  tests.TC07_Kiosk_Info_Page - Current Security pin : 1122
+15:34:18.651 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+15:34:18.700 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+15:34:18.744 [main] INFO  tests.TC07_Kiosk_Info_Page - Updated Security pin : 0011
+15:34:21.804 [main] INFO  tests.TC07_Kiosk_Info_Page - Current TD Settings: Enable
+15:34:22.401 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+15:34:22.438 [main] INFO  tests.TC07_Kiosk_Info_Page - Current TD Settings: Disable
+15:34:22.470 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+15:35:27.186 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+15:35:29.567 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+15:35:31.344 [main] INFO  tests.TC07_Kiosk_Info_Page - Brand Name : InReach
+15:35:32.401 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+15:35:33.492 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+15:35:36.502 [main] INFO  tests.TC07_Kiosk_Info_Page - ############### Starting the validation of Security Pin ################
+15:35:36.560 [main] INFO  tests.TC07_Kiosk_Info_Page - Current Security pin : 0011
+15:35:37.382 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+15:35:37.437 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+15:35:37.489 [main] INFO  tests.TC07_Kiosk_Info_Page - Updated Security pin : 1234
+15:35:40.540 [main] INFO  tests.TC07_Kiosk_Info_Page - Current TD Settings: Enable
+15:35:41.335 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+15:35:41.425 [main] INFO  tests.TC07_Kiosk_Info_Page - Current TD Settings: Disable
+15:35:41.549 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+15:36:41.472 [main] INFO  tests.TC07_Kiosk_Info_Page - The Manufacturer S/N is passed on the box
+15:36:43.113 [main] INFO  tests.TC07_Kiosk_Info_Page - The Kiosk Info tab has been opened
+15:36:45.012 [main] INFO  tests.TC07_Kiosk_Info_Page - Brand Name : BistroToGo
+15:36:46.329 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+15:36:47.837 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+15:36:50.850 [main] INFO  tests.TC07_Kiosk_Info_Page - ############### Starting the validation of Security Pin ################
+15:36:50.896 [main] INFO  tests.TC07_Kiosk_Info_Page - Current Security pin : 1234
+15:36:51.308 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+15:36:51.376 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+15:36:51.432 [main] INFO  tests.TC07_Kiosk_Info_Page - Updated Security pin : 9821
+15:36:54.508 [main] INFO  tests.TC07_Kiosk_Info_Page - Current TD Settings: Enable
+15:36:55.118 [main] INFO  tests.TC07_Kiosk_Info_Page - The save button has been clicked
+15:36:55.151 [main] INFO  tests.TC07_Kiosk_Info_Page - Current TD Settings: Disable
+15:36:55.178 [main] INFO  tests.TC07_Kiosk_Info_Page - Popup message is: GC Kisosk updated successfully
+15:46:39.938 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - ############### Starting the validation of Low Data Mode ################
+15:46:50.773 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - The Manufacturer S/N is passed on the box
+15:46:52.423 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - The Kiosk Info tab has been opened
+15:46:53.592 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - Current Low Data Mode : No
+16:18:23.236 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - ############### Starting the validation of Low Data Mode ################
+16:18:34.752 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - The Manufacturer S/N is passed on the box
+16:18:36.313 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - The Kiosk Info tab has been opened
+16:18:37.370 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - Current Low Data Mode : No
+16:22:06.615 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - ############### Starting the validation of Low Data Mode ################
+16:22:17.204 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - The Manufacturer S/N is passed on the box
+16:22:18.829 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - The Kiosk Info tab has been opened
+16:22:20.471 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - Current Low Data Mode : No
+16:22:21.714 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - The save button has been clicked
+16:22:21.752 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - After Low Data Mode : Yes
+16:22:25.761 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - Popup message is: GC Kisosk updated successfully
+16:46:57.403 [main] INFO  tests.TC07_Kiosk_Info_Page_Discount - ############### Starting the validation of Discount Type ################
+16:47:07.996 [main] INFO  tests.TC07_Kiosk_Info_Page_Discount - The Manufacturer S/N is passed on the box
+16:47:09.833 [main] INFO  tests.TC07_Kiosk_Info_Page_Discount - The Kiosk Info tab has been opened
+16:47:13.428 [main] INFO  tests.TC07_Kiosk_Info_Page_Discount - Current Discount Type : Amount
+16:47:14.124 [main] INFO  tests.TC07_Kiosk_Info_Page_Discount - The rate has been passed
+16:47:14.245 [main] INFO  tests.TC07_Kiosk_Info_Page_Discount - The save button has been clicked
+16:47:17.301 [main] INFO  tests.TC07_Kiosk_Info_Page_Discount - After Discount Type : Rate
+09:55:38.565 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - ############### Starting the validation of IoT Commands ################
+09:55:48.875 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - The Manufacturer S/N is passed on the box
+09:55:51.095 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - The Kiosk Info tab has been opened
+09:55:53.663 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - The Update Catalog button has been clicked
+09:55:56.845 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - The Reboot KIOSK button has been clicked
+09:56:00.010 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - The Reboot LYNK button has been clicked
+09:56:03.108 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - Popup message is: Success
+10:08:09.772 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - ############### Starting the validation of IoT Commands ################
+10:09:19.221 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - ############### Starting the validation of IoT Commands ################
+10:09:31.296 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - The Manufacturer S/N is passed on the box
+10:09:33.696 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - The Kiosk Info tab has been opened
+10:09:36.091 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - The Update Catalog button has been clicked
+10:09:39.171 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - Popup message is: Success
+10:09:39.314 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - The Reboot LYNK button has been clicked
+10:09:42.388 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - Popup message is: Success
+10:09:42.592 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - The Reboot KIOSK button has been clicked
+10:09:45.671 [main] INFO  tests.TC07_Kiosk_Info_Page_Settings - Popup message is: Success
