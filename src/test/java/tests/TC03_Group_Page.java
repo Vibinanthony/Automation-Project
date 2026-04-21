@@ -22,11 +22,20 @@ public class TC03_Group_Page extends BaseTest {
     @Test
     public void TC03_Group_page() {
 
+        loginAsGlobalUser();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));   // Explicit Wait
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"hamburger\"]/div"))).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Setup']"))).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("kioskGroup"))).click();
-        log.info("Kiosk Group Button is clicked");
+
+        String currentUrlOfPage = driver.getCurrentUrl();
+        if (currentUrlOfPage.equals("https://pwa.devconnecthq.live/home/operator-setup/kiosk-group")) {
+            log.info("Kiosk Group Button has been clicked");
+        } else {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("kioskGroup"))).click();
+            log.info("The button was not clicked properly, clicked again");
+        }
+
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("Name"))).sendKeys("Vibin");
         log.info("The Grouping page is opened and the Name is searched");
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"dropdown-opan-style\"]/div/div/div[2]/div/div/div/main/div[3]/div/div/div/div/div/div/div[2]/table/tbody/tr[2]/td[1]/button/span"))).click();

@@ -19,13 +19,22 @@ public class TC05_Dashboard_page extends BaseTest {
     @Test
     public void TC05_Dashboard_page() throws InterruptedException {
 
+        loginAsGlobalUser();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"hamburger\"]/div"))).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Setup']"))).click();
         Thread.sleep(3000);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("kioskDashboard"))).click();
-        log.info("Kiosk Dashboard Button is clicked");
+
+        String currentUrlOfPage = driver.getCurrentUrl();
+        if (currentUrlOfPage.equals("https://pwa.devconnecthq.live/home/operator-setup/kiosk-dashboard")) {
+            log.info("Kiosk Dashboard Button has been clicked");
+        } else {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("kioskDashboard"))).click();
+            log.info("The button was not clicked properly, clicked again");
+        }
+
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("search-input"))).sendKeys("GCKDTYH59OY");
         log.info("The S/N is passed on the box");
 

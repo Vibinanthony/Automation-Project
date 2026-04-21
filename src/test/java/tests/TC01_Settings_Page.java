@@ -20,17 +20,24 @@ public class TC01_Settings_Page extends BaseTest {
     @Test
     public void Kiosk_Settings() throws InterruptedException, IOException {
 
+        loginAsGlobalUser();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));   // Explicit Wait
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"hamburger\"]/div"))).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Setup']"))).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("kioskSettings"))).click();
         log.info("Kiosk Settings Button is clicked");
 
-        WebElement serialNumberInput = wait.until(ExpectedConditions.elementToBeClickable(
-                By.id("Manufacturer Serial Number")));
+        String currentUrlOfPage = driver.getCurrentUrl();
+        if (currentUrlOfPage.equals("https://pwa.devconnecthq.live/home/operator-setup/kiosk-settings")) {
+            log.info("Kiosk Setup Button has been clicked");
+        } else {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("kioskSettings"))).click();
+            log.info("The button was not clicked properly, clicked again");
+        }
+
+        WebElement serialNumberInput = wait.until(ExpectedConditions.elementToBeClickable(By.id("Manufacturer Serial Number")));
         serialNumberInput.clear();
         serialNumberInput.sendKeys("GCKDTYH59OY");
-
         log.info("The S/N is passed");
 
         By commandDropdownBy = By.xpath("//tr[contains(@class,'ant-table-row') and .//td[normalize-space()='GCKDTYH59OY']]//td[last()]//div[contains(@class,'ant-select-selector')]");
