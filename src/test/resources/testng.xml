@@ -7,6 +7,14 @@
             <class name="tests.TC01_Settings_Page"/>
             <class name="tests.TC02_Assignment_Page"/>
             <class name="tests.TC03_Group_Page"/>
+            <class name="tests.TC05_Dashboard_page"/>
+            <class name="tests.TC06_Asset_Page"/>
+            <class name="tests.TC07_IoT_Commands"/>
+            <class name="tests.TC07_Kiosk_Info_Page"/>
+            <class name="tests.TC07_Kiosk_Info_Page_Discount"/>
+            <class name="tests.TC07_Kiosk_Info_Page_Settings"/>
+            <class name="tests.TC08_Hot_Button_Functionality"/>
+            <class name="tests.TC09_Campaign"/>
         </classes>
     </test>
 

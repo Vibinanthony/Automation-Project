@@ -28,7 +28,15 @@ public class TC06_Asset_Page extends BaseTest {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"hamburger\"]/div"))).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div/div/div/main/div[2]/div[2]/section/div[1]/div/div[1]/ul/li[2]/div/span"))).click();
         wait.until(ExpectedConditions.elementToBeClickable(By.id("assets"))).click();
-        log.info("Kiosk Asset Button is clicked");
+
+        String currentUrlOfPage = driver.getCurrentUrl();
+        if (currentUrlOfPage.equals("https://pwa.devconnecthq.live/home/assets/assets")) {
+            System.out.println("Kiosk Asset Button has been clicked");
+        } else {
+            wait.until(ExpectedConditions.elementToBeClickable(By.id("assets"))).click();
+            System.out.println("The button was not clicked properly, clicked again");
+        }
+
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("Manufacturer Serial Number"))).sendKeys("GCKDTYH59OY");
         log.info("The Manufacturer S/N is passed on the box");
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[@class='ant-btn ant-btn-link ant-btn-link']//span[text()='GCFOODEXPRNC000916']"))).click();
