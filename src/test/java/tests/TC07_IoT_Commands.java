@@ -14,7 +14,7 @@ import java.time.Duration;
 
 public class TC07_IoT_Commands extends BaseTest {
 
-    private static final Logger log = LogManager.getLogger(TC07_Kiosk_Info_Page_Settings.class);
+    private static final Logger log = LogManager.getLogger(TC07_IoT_Commands.class);
 
     @Test(priority = 0)
     public void IoT_Commands() throws InterruptedException, IOException {
