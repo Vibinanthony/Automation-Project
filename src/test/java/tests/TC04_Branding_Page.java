@@ -28,7 +28,13 @@ import java.time.Duration;
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Setup']"))).click();
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("branding"))).click();
 
-            log.info("Kiosk Branding Button is clicked");
+            String currentUrlOfPage = driver.getCurrentUrl();
+            if (currentUrlOfPage.equals("https://pwa.devconnecthq.live/home/operator-setup/branding")) {
+                log.info("Kiosk Branding Button has been clicked");
+            } else {
+                wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("branding"))).click();
+                log.info("The button was not clicked properly, clicked again");
+            }
 
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("Manufacturer Serial Number"))).sendKeys("GCKDTYH59OY");
 
