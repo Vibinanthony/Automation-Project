@@ -26,7 +26,15 @@ public class TC02_Assignment_Page extends BaseTest {
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"hamburger\"]/div"))).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Setup']"))).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("kioskAssignment"))).click();
-        log.info("Kiosk Assignment Button is clicked");
+
+        String currentUrlOfPage = driver.getCurrentUrl();
+        if (currentUrlOfPage.equals("https://pwa.devconnecthq.live/home/operator-setup/kiosk-assignment")) {
+            log.info("Kiosk Assignment Button has been clicked");
+        } else {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("kioskAssignment"))).click();
+            log.info("The button was not clicked properly, clicked again");
+        }
+
         wait.until(ExpectedConditions.elementToBeClickable(By.id("assign-operator-btn"))).click();
         log.info("The Assign Operator button has been clicked");
 
