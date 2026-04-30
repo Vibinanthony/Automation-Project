@@ -16,9 +16,10 @@ public class LoginPage { // LoginPage class for handling login related actions
     }
 
     public void login(String username, String password) { // Method for login action
-        driver.findElement(By.id("Input_Username")).sendKeys(username); // Enter username
-        driver.findElement(By.id("Input_Password")).sendKeys(password); // Enter password
-        driver.findElement(By.id("login-submit")).click(); // Click login button
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20)); // Create explicit wait object
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("Input_Username"))).sendKeys(username); // Enter username
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("Input_Password"))).sendKeys(password); // Enter password
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("login-submit"))).click(); // Click login button
     }
 
     public void clickherebutton() { // Method to click "Here" button after login
