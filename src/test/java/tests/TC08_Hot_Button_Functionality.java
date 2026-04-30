@@ -23,7 +23,7 @@ public class TC08_Hot_Button_Functionality extends BaseTest {
 
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div/div/main/div[2]/div[2]/section/header/div[3]/div[2]/button"))).click();
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@placeholder='Input search text']"))).sendKeys("Vibin Testing market");
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("/html/body/div[2]/div/div[2]/div/div[2]/div[1]/div/div/div[2]/div/div/div/ul/li/div/div"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[contains(@class,'ant-select-item-option-content') and normalize-space()='Vibin Testing market']"))).click();
         log.info("The Vibin Testing market has been opened");
         WebElement hotItemsTab = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//div[@class='ant-tabs-tab-btn' and text()='Hot Items']")));
 
