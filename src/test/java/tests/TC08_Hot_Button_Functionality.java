@@ -1,6 +1,7 @@
 package tests;
 
 import base.BaseTest;
+import base.BaseTest_Operator;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
@@ -10,7 +11,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.time.Duration;
 
-public class TC08_Hot_Button_Functionality extends BaseTest {
+public class TC08_Hot_Button_Functionality extends BaseTest_Operator {
 
     private static final Logger log = LogManager.getLogger(TC08_Hot_Button_Functionality.class);
 
@@ -18,7 +19,7 @@ public class TC08_Hot_Button_Functionality extends BaseTest {
     public void IoT_Commands() throws InterruptedException, IOException {
 
         log.info("############### Starting the validation of Hot Button ################");
-        loginAsOperatorUser();
+       // loginAsOperatorUser();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));   // Explicit Wait
 
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div/div/main/div[2]/div[2]/section/header/div[3]/div[2]/button"))).click();

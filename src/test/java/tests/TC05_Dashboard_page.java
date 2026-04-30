@@ -1,6 +1,7 @@
 package tests;
 
 import base.BaseTest;
+import base.BaseTest_Global;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -12,14 +13,14 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class TC05_Dashboard_page extends BaseTest {
+public class TC05_Dashboard_page extends BaseTest_Global {
 
     private static final Logger log = LogManager.getLogger(TC05_Dashboard_page.class);
 
     @Test
     public void TC05_Dashboard_page() throws InterruptedException {
 
-        loginAsGlobalUser();
+       // loginAsGlobalUser();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
 
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"hamburger\"]/div"))).click();

@@ -1,13 +1,21 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<suite name="CHQ Automation Suite">
+<suite name="CHQ Automation Suite" configfailurepolicy="continue">
 
-    <test name="Operator Login Tests">
+    <!-- GLOBAL TESTS -->
+    <test name="Global Tests">
         <classes>
             <class name="tests.TC01_Settings_Page"/>
             <class name="tests.TC02_Assignment_Page"/>
             <class name="tests.TC03_Group_Page"/>
+            <class name="tests.TC04_Branding_Page"/>
             <class name="tests.TC05_Dashboard_page"/>
+        </classes>
+    </test>
+
+    <!-- OPERATOR TESTS -->
+    <test name="Operator Tests">
+        <classes>
             <class name="tests.TC06_Asset_Page"/>
             <class name="tests.TC07_IoT_Commands"/>
             <class name="tests.TC07_Kiosk_Info_Page"/>

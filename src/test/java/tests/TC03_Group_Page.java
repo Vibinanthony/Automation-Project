@@ -1,6 +1,7 @@
 package tests;
 
 import base.BaseTest;
+import base.BaseTest_Global;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Alert;
@@ -15,14 +16,14 @@ import java.time.Duration;
 
 import static base.DriverFactory.driver;
 
-public class TC03_Group_Page extends BaseTest {
+public class TC03_Group_Page extends BaseTest_Global {
 
     private static final Logger log = LogManager.getLogger(TC03_Group_Page.class);
 
     @Test
     public void TC03_Group_page() {
 
-        loginAsGlobalUser();
+        //loginAsGlobalUser();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));   // Explicit Wait
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"hamburger\"]/div"))).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Setup']"))).click();

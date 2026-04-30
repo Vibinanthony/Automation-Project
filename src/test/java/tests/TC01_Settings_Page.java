@@ -1,6 +1,7 @@
 package tests;
 
 import base.BaseTest;
+import base.BaseTest_Global;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
@@ -13,14 +14,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.io.IOException;
 import java.time.Duration;
 
-public class TC01_Settings_Page extends BaseTest {
+public class TC01_Settings_Page extends BaseTest_Global {
 
     private static final Logger log = LogManager.getLogger(TC01_Settings_Page.class);
 
     @Test
     public void Kiosk_Settings() throws InterruptedException, IOException {
 
-        loginAsGlobalUser();
+       // loginAsGlobalUser();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));   // Explicit Wait
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"hamburger\"]/div"))).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Setup']"))).click();

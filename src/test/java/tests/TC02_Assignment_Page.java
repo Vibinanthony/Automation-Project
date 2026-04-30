@@ -1,6 +1,7 @@
 package tests;
 
 import base.BaseTest;
+import base.BaseTest_Global;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -13,7 +14,7 @@ import org.testng.annotations.Test;
 import java.io.IOException;
 import java.time.Duration;
 
-public class TC02_Assignment_Page extends BaseTest {
+public class TC02_Assignment_Page extends BaseTest_Global {
 
     private static final Logger log = LogManager.getLogger(TC02_Assignment_Page.class);
 
@@ -21,7 +22,7 @@ public class TC02_Assignment_Page extends BaseTest {
     public void Assigning_operator() throws InterruptedException, IOException {
 
         log.info("############### Starting the 1st validation ################");
-        loginAsGlobalUser();
+      //  loginAsGlobalUser();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));   // Explicit Wait
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"hamburger\"]/div"))).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Setup']"))).click();

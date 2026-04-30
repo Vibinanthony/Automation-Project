@@ -1,6 +1,7 @@
 package tests;
 
 import base.BaseTest;
+import base.BaseTest_Global;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.*;
@@ -13,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
 
-public class TC09_Campaign extends BaseTest {
+public class TC09_Campaign extends BaseTest_Global {
 
     private static final Logger log = LogManager.getLogger(TC09_Campaign.class);
 
@@ -21,7 +22,7 @@ public class TC09_Campaign extends BaseTest {
     public void Campaign() throws InterruptedException, IOException {
 
         log.info("############### Starting the validation of Campaign ################");
-        loginAsOperatorUser();
+       // loginAsOperatorUser();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));   // Explicit Wait
 
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div/div/main/div[2]/div[2]/section/header/div[3]/div[2]/button"))).click();

@@ -1,6 +1,7 @@
 package tests;
 
 import base.BaseTest;
+import base.BaseTest_Global;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,7 +16,7 @@ import java.time.Duration;
 
 import static base.DriverFactory.driver;
 
-public class TC07_Kiosk_Info_Page extends BaseTest {
+public class TC07_Kiosk_Info_Page extends BaseTest_Global {
 
     private static final Logger log = LogManager.getLogger(TC07_Kiosk_Info_Page.class);
 
@@ -23,7 +24,7 @@ public class TC07_Kiosk_Info_Page extends BaseTest {
     public void BrandingSettings() throws InterruptedException, IOException {
 
         //  log.info("############### Starting the validation of Branding ################");
-        loginAsOperatorUser();
+       // loginAsOperatorUser();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));   // Explicit Wait
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"hamburger\"]/div"))).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div/div/div/main/div[2]/div[2]/section/div[1]/div/div[1]/ul/li[2]/div/span"))).click();

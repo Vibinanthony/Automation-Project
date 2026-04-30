@@ -2,6 +2,7 @@ package tests;
 
 import base.BaseTest;
 
+import base.BaseTest_Global;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
@@ -11,7 +12,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class LogoutTest extends BaseTest {
+public class LogoutTest extends BaseTest_Global {
 
     private static final Logger log = LogManager.getLogger(LoginTest.class);
 

@@ -1,6 +1,7 @@
 package tests;
 
 import base.BaseTest;
+import base.BaseTest_Operator;
 import org.apache.commons.io.FileUtils;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -15,7 +16,7 @@ import java.time.Duration;
 
 import static base.DriverFactory.driver;
 
-public class TC06_Asset_Page extends BaseTest {
+public class TC06_Asset_Page extends BaseTest_Operator {
 
     private static final Logger log = LogManager.getLogger(TC06_Asset_Page.class);
 
@@ -23,7 +24,7 @@ public class TC06_Asset_Page extends BaseTest {
     public void Opening_Asset_Tab() throws InterruptedException, IOException {
 
         log.info("############### Starting the 1st validation ################");
-        loginAsOperatorUser();
+       // loginAsOperatorUser();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));   // Explicit Wait
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"hamburger\"]/div"))).click();
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"root\"]/div/div/div/main/div[2]/div[2]/section/div[1]/div/div[1]/ul/li[2]/div/span"))).click();
