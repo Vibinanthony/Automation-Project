@@ -22,16 +22,18 @@ public class TC01_Settings_Page extends BaseTest {
 
         loginAsGlobalUser();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));   // Explicit Wait
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"hamburger\"]/div"))).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Setup']"))).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("kioskSettings"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"hamburger\"]/div"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Setup']"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("kioskSettings"))).click();
         log.info("Kiosk Settings Button is clicked");
 
         String currentUrlOfPage = driver.getCurrentUrl();
         if (currentUrlOfPage.equals("https://pwa.devconnecthq.live/home/operator-setup/kiosk-settings")) {
             log.info("Kiosk Setup Button has been clicked");
         } else {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("kioskSettings"))).click();
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"hamburger\"]/div"))).click();
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Setup']"))).click();
+            wait.until(ExpectedConditions.elementToBeClickable(By.id("kioskSettings"))).click();
             log.info("The button was not clicked properly, clicked again");
         }
 

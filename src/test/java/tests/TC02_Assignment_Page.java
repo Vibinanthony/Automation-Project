@@ -23,15 +23,17 @@ public class TC02_Assignment_Page extends BaseTest {
         log.info("############### Starting the 1st validation ################");
         loginAsGlobalUser();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));   // Explicit Wait
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"hamburger\"]/div"))).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//span[text()='Setup']"))).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("kioskAssignment"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"hamburger\"]/div"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Setup']"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("kioskAssignment"))).click();
 
         String currentUrlOfPage = driver.getCurrentUrl();
         if (currentUrlOfPage.equals("https://pwa.devconnecthq.live/home/operator-setup/kiosk-assignment")) {
             log.info("Kiosk Assignment Button has been clicked");
         } else {
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("kioskAssignment"))).click();
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"hamburger\"]/div"))).click();
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[text()='Setup']"))).click();
+            wait.until(ExpectedConditions.elementToBeClickable(By.id("kioskAssignment"))).click();
             log.info("The button was not clicked properly, clicked again");
         }
 
@@ -79,11 +81,11 @@ public class TC02_Assignment_Page extends BaseTest {
         mywait.until(ExpectedConditions.visibilityOfElementLocated(By.id("Manufacturer Serial Number"))).sendKeys("GCKDTYH59OY");
         log.info("The S/N has been passed on the Search Box ");
         String branch_name = mywait.until(ExpectedConditions.visibilityOfElementLocated(
-                        By.xpath("/html/body/div[1]/div/div/div/main/div[2]/div[2]/section/div[2]/div/div/div[2]/div/main/div[2]/div/div/div/div/div/div/div[2]/table/tbody/tr[2]/td[6]/span")))
+                        By.xpath("//table/tbody/tr[2]/td[6]/span")))
                 .getText();
         log.info("The Assigned Branch name is " + branch_name);
-        mywait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[1]/div/div/div/main/div[2]/div[2]/section/div[2]/div/div/div[2]/div/main/div[2]/div/div/div/div/div/div/div[2]/table/tbody/tr[2]/td[2]/button/span"))).click();
-        mywait.until(ExpectedConditions.visibilityOfElementLocated(By.id("rc-tabs-0-tab-placementHistory"))).click();
+        mywait.until(ExpectedConditions.elementToBeClickable(By.xpath("//table/tbody/tr[2]/td[2]/button/span"))).click();
+        mywait.until(ExpectedConditions.elementToBeClickable(By.id("rc-tabs-0-tab-placementHistory"))).click();
         log.info("The History tab has been clicked");
 
     }
