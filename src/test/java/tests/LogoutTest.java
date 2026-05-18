@@ -23,9 +23,9 @@ public class LogoutTest extends BaseTest {
 
         if (current_url.equals("https://pwa.devconnecthq.live/home")){
 
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"profile\"]/button/div[1]/div[1]/span"))).click();
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"profile\"]/button/div[1]/div[1]/span"))).click();
             log.info("User Profile has been clicked");
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"logout\"]/button/span"))).click();
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"logout\"]/button/span"))).click();
             log.info("The Logout has been Done");
         } else {
             log.info("The URL is invalid, Skipping the logout.....................");
