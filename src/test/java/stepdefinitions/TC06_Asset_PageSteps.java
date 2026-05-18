@@ -1,25 +1,146 @@
 package stepdefinitions;
 
+import base.BaseTest_Operator;
 import io.cucumber.java.en.When;
-import tests.TC06_Asset_Page;
+import java.io.IOException;
+import java.time.Duration;
+import org.apache.commons.io.FileUtils;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.openqa.selenium.*;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import static base.DriverFactory.driver;
 
-public class TC06_Asset_PageSteps {
-
-    private TC06_Asset_Page test;
+/**
+ * Migrated from tests.TC06_Asset_Page — full Selenium logic lives here (no delegation).
+ */
+public class TC06_Asset_PageSteps extends BaseTest_Operator {
+    private static final Logger log = LogManager.getLogger(TC06_Asset_PageSteps.class);
 
     @When("the asset tab is opened for kiosk info")
-    public void theAssetTabIsOpenedForKioskInfo() throws Exception {
-        test = StepExecutor.bind(TC06_Asset_Page.class);
-        test.Opening_Asset_Tab();
-    }
+    public void Opening_Asset_Tab() throws Exception {
+        syncFromTestContext();
 
+
+        log.info("############### Starting the 1st validation ################");
+        loginAsOperatorUser();
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));   // Explicit Wait
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"hamburger\"]/div"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div/div/main/div[2]/div[2]/section/div[1]/div/div[1]/ul/li[2]/div/span"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.id("assets"))).click();
+
+        String currentUrlOfPage = driver.getCurrentUrl();
+        if (currentUrlOfPage.equals("https://pwa.devconnecthq.live/home/assets/assets")) {
+            System.out.println("Kiosk Asset Button has been clicked");
+        } else {
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"hamburger\"]/div"))).click();
+            wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"root\"]/div/div/div/main/div[2]/div[2]/section/div[1]/div/div[1]/ul/li[2]/div/span"))).click();
+            wait.until(ExpectedConditions.elementToBeClickable(By.id("assets"))).click();
+            System.out.println("The button was not clicked properly, clicked again");
+        }
+
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("Manufacturer Serial Number"))).sendKeys("GCKDTYH59OY");
+        log.info("The Manufacturer S/N is passed on the box");
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button//span[starts-with(text(),'GCFOODEXPRNC')])[1]"))).click();
+        log.info("The Kiosk Info tab has been opened");
+    
+    }
     @When("the asset tab fields are validated")
-    public void theAssetTabFieldsAreValidated() throws Exception {
-        test.Validate_Asset_Tab();
-    }
+    public void Validate_Asset_Tab() throws Exception {
+        syncFromTestContext();
 
+
+        log.info("############### Starting the 2nd validation & Getting the Field Data from the table and Printing ################");
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));   // Explicit Wait
+
+        String Kiosk_status = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//*[@id=\"rc-tabs-0-panel-kioskInfo\"]/div/main/div[2]/div[1]/div[2]/div[1]/form/div/div/div[2]/div/div"))).getText();
+        log.info("Kiosk Status Active : " + Kiosk_status);
+
+        String Loyalty_SN = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//*[@id=\"rc-tabs-0-panel-kioskInfo\"]/div/main/div[2]/div[1]/div[2]/div[4]/form/div/div/div[2]/div/div/span"))).getText();
+        log.info("Loyalty S/N : " + Loyalty_SN);
+
+        String BrandName = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//*[@id=\"rc-tabs-0-panel-kioskInfo\"]/div/main/div[2]/div[1]/div[2]/div[7]/form/div/div/div[2]/div/div/span"))).getText();
+        log.info("Brand Name : " + BrandName);
+
+        String Kiosk_Group_name = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//*[@id=\"rc-tabs-0-panel-kioskInfo\"]/div/main/div[2]/div[1]/div[2]/div[10]/form/div/div/div[2]/div/div/span"))).getText();
+        log.info("Kiosk Group Name : " + Kiosk_Group_name);
+
+        String InHand_Data_Usage = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//*[@id=\"rc-tabs-0-panel-kioskInfo\"]/div/main/div[2]/div[1]/div[2]/div[13]/form/div/div/div[2]/div/div"))).getText();
+        log.info("InHand Data Usage : " + InHand_Data_Usage);
+
+        String Kiosk_name = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//*[@id=\"rc-tabs-0-panel-kioskInfo\"]/div/main/div[2]/div[1]/div[2]/div[2]/form/div/div/div[2]/div/div/span"))).getText();
+        log.info("Kiosk Name : " + Kiosk_name);
+
+        String Mac = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//*[@id=\"rc-tabs-0-panel-kioskInfo\"]/div/main/div[2]/div[1]/div[2]/div[5]/form/div/div/div[2]/div/div/span"))).getText();
+        log.info("Mac Address : " + Mac);
+
+        String mm_version = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//*[@id=\"rc-tabs-0-panel-kioskInfo\"]/div/main/div[2]/div[1]/div[2]/div[8]/form/div/div/div[2]/div/div/span"))).getText();
+        log.info("Installed MM version : " + mm_version);
+
+        String InHand_sn = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//*[@id=\"rc-tabs-0-panel-kioskInfo\"]/div/main/div[2]/div[1]/div[2]/div[11]/form/div/div/div[2]/div/div"))).getText();
+        log.info("InHand S/N : " + InHand_sn);
+
+        String timezone = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//*[@id=\"rc-tabs-0-panel-kioskInfo\"]/div/main/div[2]/div[1]/div[2]/div[14]/form/div/div/div[2]/div/div/span"))).getText();
+        log.info("Time Zone : " + timezone);
+
+        String Manufacturer_sn = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//*[@id=\"rc-tabs-0-panel-kioskInfo\"]/div/main/div[2]/div[1]/div[2]/div[3]/form/div/div/div[2]/div/div/span"))).getText();
+        log.info("Kiosk S/N : " + Manufacturer_sn);
+
+        String pi_model = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//*[@id=\"rc-tabs-0-panel-kioskInfo\"]/div/main/div[2]/div[1]/div[2]/div[6]/form/div/div/div[2]/div/div/span"))).getText();
+        log.info("Pi Model : " + pi_model);
+
+        String Os_version = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//*[@id=\"rc-tabs-0-panel-kioskInfo\"]/div/main/div[2]/div[1]/div[2]/div[9]/form/div/div/div[2]/div/div/span"))).getText();
+        log.info("Installed OS Version : " + Os_version);
+
+        String Signal_strength = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//*[@id=\"rc-tabs-0-panel-kioskInfo\"]/div/main/div[2]/div[1]/div[2]/div[12]/form/div/div/div[2]/div/div"))).getText();
+        log.info("Signal Strength : " + Signal_strength);
+    
+    }
     @When("the misc info fields are validated")
-    public void theMiscInfoFieldsAreValidated() throws Exception {
-        test.Validate_Misc_Info();
+    public void Validate_Misc_Info() throws Exception {
+        syncFromTestContext();
+
+
+        log.info("############### Starting the 3rd validation & Getting the Misc Info Data from the table and Printing ################");
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));   // Explicit Wait
+
+        String Collection = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//*[@id=\"rc-tabs-0-panel-kioskInfo\"]/div/main/div[2]/div[4]/div[2]/div[1]/form/div/div/div[2]/div/div"))).getText();
+        log.info("Collection Time : " + Collection);
+
+        String Total_reboot = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//*[@id=\"rc-tabs-0-panel-kioskInfo\"]/div/main/div[2]/div[4]/div[2]/div[4]/form/div/div/div[2]/div/div"))).getText();
+        log.info("Total reboot count : " + Total_reboot);
+
+        String Service_flag = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//*[@id=\"rc-tabs-0-panel-kioskInfo\"]/div/main/div[2]/div[4]/div[2]/div[2]/form/div/div/div[2]/div/div"))).getText();
+        log.info("Service Flag Status : " + Service_flag);
+
+        String Heartbeat = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//*[@id=\"rc-tabs-0-panel-kioskInfo\"]/div/main/div[2]/div[4]/div[2]/div[4]/form/div/div/div[2]/div/div"))).getText();
+        log.info("Heartbeat Timestamp : " + Heartbeat);
+
+        String Market_Provider = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//*[@id=\"rc-tabs-0-panel-kioskInfo\"]/div/main/div[2]/div[4]/div[2]/div[3]/form/div/div/div[2]/div/div/button/span"))).getText();
+        log.info("Market Provider : " + Market_Provider);
+
+
+    
     }
 }
