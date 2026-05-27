@@ -1,25 +1,27 @@
-package tests;
+package stepdefinitions;
 
-import base.BaseTest;
-import org.apache.logging.log4j.LogManager;
+import base.BaseTest_Global;
+import io.cucumber.java.en.When;
+import java.time.Duration;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.Test;
+import org.openqa.selenium.WebElement;
 
-import java.time.Duration;
+/**
+ * Migrated from tests.TC04_Branding_Page — full Selenium logic lives here (no delegation).
+ */
+public class TC04_Branding_PageSteps extends BaseTest_Global {
+    private static final Logger log = LogManager.getLogger(TC04_Branding_PageSteps.class);
 
+    @When("the kiosk branding change flow is executed")
+    public void TC04_Branding_page() {
+        syncFromTestContext();
 
-    public class TC04_Branding_Page extends BaseTest {
-
-        private static final Logger log = LogManager.getLogger(TC04_Branding_Page.class);
-
-        @Test
-        public void TC04_Branding_page() {
 
             loginAsGlobalUser();
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -87,5 +89,6 @@ import java.time.Duration;
             String afterbrandingname = driver.findElement(By.xpath("//*[@id=\"rc-tabs-0-panel-branding\"]/main/div/div/main/div[2]/div/div/div/div/div/div/div[2]/table/tbody/tr[2]/td[7]/span")).getText();
             log.info("The Current Branding is: " + afterbrandingname);
 
-        }
+        
     }
+}

@@ -1,24 +1,28 @@
-package tests;
+package stepdefinitions;
 
-import base.BaseTest;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.Test;
+import base.BaseTest_Operator;
+import io.cucumber.java.en.When;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class TC09_Campaign extends BaseTest {
+/**
+ * Migrated from tests.TC09_Campaign — full Selenium logic lives here (no delegation).
+ */
+public class TC09_CampaignSteps extends BaseTest_Operator {
+    private static final Logger log = LogManager.getLogger(TC09_CampaignSteps.class);
 
-    private static final Logger log = LogManager.getLogger(TC09_Campaign.class);
+    @When("the campaign flow is executed")
+    public void Campaign() throws Exception {
+        syncFromTestContext();
 
-    @Test(priority = 0)
-    public void Campaign() throws InterruptedException, IOException {
 
         log.info("############### Starting the validation of Campaign ################");
         loginAsOperatorUser();
@@ -113,5 +117,6 @@ public class TC09_Campaign extends BaseTest {
         log.info("The save button has been clicked successfully");
 
 
+    
     }
 }

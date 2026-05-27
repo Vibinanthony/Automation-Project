@@ -1,21 +1,25 @@
-package tests;
+package stepdefinitions;
 
-import base.BaseTest;
-import org.apache.logging.log4j.LogManager;
+import base.BaseTest_Operator;
+import io.cucumber.java.en.When;
+import java.io.IOException;
+import java.time.Duration;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.Test;
-import java.io.IOException;
-import java.time.Duration;
 
-public class TC08_Hot_Button_Functionality extends BaseTest {
+/**
+ * Migrated from tests.TC08_Hot_Button_Functionality — full Selenium logic lives here (no delegation).
+ */
+public class TC08_Hot_Button_FunctionalitySteps extends BaseTest_Operator {
+    private static final Logger log = LogManager.getLogger(TC08_Hot_Button_FunctionalitySteps.class);
 
-    private static final Logger log = LogManager.getLogger(TC08_Hot_Button_Functionality.class);
+    @When("the hot button functionality flow is executed")
+    public void IoT_Commands() throws Exception {
+        syncFromTestContext();
 
-    @Test(priority = 0)
-    public void IoT_Commands() throws InterruptedException, IOException {
 
         log.info("############### Starting the validation of Hot Button ################");
         loginAsOperatorUser();
@@ -60,5 +64,6 @@ public class TC08_Hot_Button_Functionality extends BaseTest {
 
         wait.until(ExpectedConditions.elementToBeClickable(By.id("product-data-modal-save-button"))).click();
         log.info("The save button has been clicked successfully");
+    
     }
 }

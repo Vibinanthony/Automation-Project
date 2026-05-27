@@ -1,26 +1,28 @@
-package tests;
+package stepdefinitions;
 
-import base.BaseTest;
-import org.apache.logging.log4j.LogManager;
+import base.BaseTest_Global;
+import io.cucumber.java.en.When;
+import java.time.Duration;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.Test;
-
-import java.time.Duration;
-
+import org.openqa.selenium.WebElement;
 import static base.DriverFactory.driver;
 
-public class TC03_Group_Page extends BaseTest {
+/**
+ * Migrated from tests.TC03_Group_Page — full Selenium logic lives here (no delegation).
+ */
+public class TC03_Group_PageSteps extends BaseTest_Global {
+    private static final Logger log = LogManager.getLogger(TC03_Group_PageSteps.class);
 
-    private static final Logger log = LogManager.getLogger(TC03_Group_Page.class);
-
-    @Test
+    @When("the kiosk group page flow is executed")
     public void TC03_Group_page() {
+        syncFromTestContext();
+
 
         loginAsGlobalUser();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));   // Explicit Wait
@@ -45,5 +47,6 @@ public class TC03_Group_Page extends BaseTest {
         String installedMMVersion = driver.findElement(By.xpath("//*[@id=\"dropdown-opan-style\"]/div/div/div[2]/div/main/form/div[3]/div/div/div/div/div/div/div[2]/table/tbody/tr[2]/td[6]/span")).getText();
         log.info("Installed MM Version is: " + installedMMVersion);
 
+    
     }
 }

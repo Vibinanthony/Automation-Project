@@ -1,23 +1,27 @@
-package tests;
+package stepdefinitions;
 
-import base.BaseTest;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
-import org.testng.annotations.Test;
+import base.BaseTest_Operator;
+import io.cucumber.java.en.When;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.List;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.openqa.selenium.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class TC10_Adding_the_asset extends BaseTest {
+/**
+ * Migrated from tests.TC10_Adding_the_asset — full Selenium logic lives here (no delegation).
+ */
+public class TC10_Adding_the_assetSteps extends BaseTest_Operator {
+    private static final Logger log = LogManager.getLogger(TC10_Adding_the_assetSteps.class);
 
-    private static final Logger log = LogManager.getLogger(TC10_Adding_the_asset.class);
+    @When("the non-vending asset is added")
+    public void Adding_the_Asset() throws Exception {
+        syncFromTestContext();
 
-    @Test(priority = 0)
-    public void Adding_the_Asset() throws InterruptedException, IOException {
 
         log.info("############### Starting the validation of Addition of the asset ################");
         loginAsOperatorUser();
@@ -42,10 +46,12 @@ public class TC10_Adding_the_asset extends BaseTest {
         log.info("Popup message is: " + popupMessage);
         Assert.assertEquals(popupMessage, "Non-Vending Asset added successfully");
 
+    
     }
+    @When("the non-vending asset is removed")
+    public void Removing_the_Asset() throws Exception {
+        syncFromTestContext();
 
-    @Test(priority = 1)
-    public void Removing_the_Asset() throws InterruptedException, IOException {
 
         Thread.sleep(3000);
         log.info("############### Starting the validation of Addition of the asset ################");
@@ -96,5 +102,6 @@ public class TC10_Adding_the_asset extends BaseTest {
         log.info("Popup message is: " + popupMessage);
         Assert.assertEquals(popupMessage, "Non-Vending Asset removed successfully");
 
+    
     }
 }

@@ -1,23 +1,27 @@
-package tests;
+package stepdefinitions;
 
-import base.BaseTest;
-import org.apache.logging.log4j.LogManager;
+import org.testng.Assert;
+import base.BaseTest_Operator;
+import io.cucumber.java.en.When;
+import java.io.IOException;
+import java.time.Duration;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-import java.io.IOException;
-import java.time.Duration;
 
-public class TC07_Kiosk_Info_Page_Settings extends BaseTest {
+/**
+ * Migrated from tests.TC07_Kiosk_Info_Page_Settings — full Selenium logic lives here (no delegation).
+ */
+public class TC07_Kiosk_Info_Page_SettingsSteps extends BaseTest_Operator {
+    private static final Logger log = LogManager.getLogger(TC07_Kiosk_Info_Page_SettingsSteps.class);
 
-    private static final Logger log = LogManager.getLogger(TC07_Kiosk_Info_Page_Settings.class);
+    @When("the low data mode flow is executed")
+    public void LowDataMode() throws Exception {
+        syncFromTestContext();
 
-    @Test(priority = 0)
-    public void LowDataMode() throws InterruptedException, IOException {
 
         log.info("############### Starting the validation of Low Data Mode ################");
         loginAsOperatorUser();
@@ -103,10 +107,12 @@ public class TC07_Kiosk_Info_Page_Settings extends BaseTest {
 
         Assert.assertNotEquals(currentLowDataMode, afterLowDataMode, "Low Data Mode value did not change");
 
+    
     }
+    @When("the QR code visibility flow is executed")
+    public void QRCodeVisibility() throws Exception {
+        syncFromTestContext();
 
-    @Test(priority = 1)
-    public void QRCodeVisibility() throws InterruptedException, IOException {
 
         Thread.sleep(3000);
         log.info("############### Starting the validation of QR Code Visibility ################");
@@ -147,6 +153,6 @@ public class TC07_Kiosk_Info_Page_Settings extends BaseTest {
 
         Assert.assertNotEquals(current_qr_code, after_qr_code, "QR Code Visibility did not change");
 
+    
     }
-
 }

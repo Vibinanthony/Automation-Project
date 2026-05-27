@@ -1,26 +1,29 @@
-package tests;
+package stepdefinitions;
 
-import base.BaseTest;
+import org.testng.Assert;
+import base.BaseTest_Operator;
+import io.cucumber.java.en.When;
+import java.io.IOException;
+import java.time.Duration;
 import org.apache.commons.io.FileUtils;
-import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-import java.io.IOException;
-import java.time.Duration;
-
 import static base.DriverFactory.driver;
 
-public class TC07_Kiosk_Info_Page extends BaseTest {
+/**
+ * Migrated from tests.TC07_Kiosk_Info_Page — full Selenium logic lives here (no delegation).
+ */
+public class TC07_Kiosk_Info_PageSteps extends BaseTest_Operator {
+    private static final Logger log = LogManager.getLogger(TC07_Kiosk_Info_PageSteps.class);
 
-    private static final Logger log = LogManager.getLogger(TC07_Kiosk_Info_Page.class);
+    @When("the kiosk info branding flow is executed")
+    public void Branding() throws Exception {
+        syncFromTestContext();
 
-    @Test(priority = 0)
-    public void Branding() throws InterruptedException, IOException {
 
         //  log.info("############### Starting the validation of Branding ################");
         loginAsOperatorUser();
@@ -96,10 +99,12 @@ public class TC07_Kiosk_Info_Page extends BaseTest {
 
         Assert.assertNotEquals(currentBranding, AfterBranding, "Branding value did not change");
 
+    
     }
+    @When("the kiosk security pin flow is executed")
+    public void SecurityPin() throws Exception {
+        syncFromTestContext();
 
-    @Test(priority = 1)
-    public void SecurityPin() throws InterruptedException, IOException {
 
         Thread.sleep(3000);
         log.info("############### Starting the validation of Security Pin ################");
@@ -135,11 +140,12 @@ public class TC07_Kiosk_Info_Page extends BaseTest {
 
         Assert.assertNotEquals(currentSecurityPin, AfterSecurityPin, "Security Pin value did not change");
 
+    
     }
+    @When("the kiosk TD settings flow is executed")
+    public void TDSettings() throws Exception {
+        syncFromTestContext();
 
-
-    @Test(priority = 2)
-    public void TDSettings() throws InterruptedException, IOException {
 
         Thread.sleep(3000);
         log.info("############### Starting the validation of TD Setup ################");
@@ -200,7 +206,6 @@ public class TC07_Kiosk_Info_Page extends BaseTest {
 
         Assert.assertNotEquals(currentTDsettings, AfterTDsettings, "TD Setting value did not change");
 
+    
     }
-
-
 }
