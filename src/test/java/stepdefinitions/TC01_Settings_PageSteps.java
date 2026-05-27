@@ -40,6 +40,17 @@ public class TC01_Settings_PageSteps extends BaseTest_Global {
             log.info("The button was not clicked properly, clicked again");
         }
 
+        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("loading-container-for-tab")));
+
+        WebElement validate_checkbox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='ant-checkbox']")));
+        log.info("Located the checkbox");
+        if(!validate_checkbox.isSelected()){
+            validate_checkbox.click();
+            log.info("Checkbox was not selected, so it has now been selected");
+        } else {
+            log.info("Checkbox is already selected");
+        }
+
         WebElement serialNumberInput = wait.until(ExpectedConditions.elementToBeClickable(By.id("Manufacturer Serial Number")));
         serialNumberInput.clear();
         serialNumberInput.sendKeys("GCKDTYH59OY");
@@ -114,6 +125,6 @@ public class TC01_Settings_PageSteps extends BaseTest_Global {
         Assert.assertEquals(popupMessage, "UPLOAD-LOGS command sent successfully");
 
 
-    
+
     }
 }
