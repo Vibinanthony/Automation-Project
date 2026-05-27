@@ -1,23 +1,27 @@
-package tests;
+package stepdefinitions;
 
-import base.BaseTest;
-import org.apache.logging.log4j.LogManager;
+import org.testng.Assert;
+import base.BaseTest_Operator;
+import io.cucumber.java.en.When;
+import java.io.IOException;
+import java.time.Duration;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-import java.io.IOException;
-import java.time.Duration;
 
-public class TC07_IoT_Commands extends BaseTest {
+/**
+ * Migrated from tests.TC07_IoT_Commands — full Selenium logic lives here (no delegation).
+ */
+public class TC07_IoT_CommandsSteps extends BaseTest_Operator {
+    private static final Logger log = LogManager.getLogger(TC07_IoT_CommandsSteps.class);
 
-    private static final Logger log = LogManager.getLogger(TC07_IoT_Commands.class);
+    @When("the IoT commands flow is executed")
+    public void IoT_Commands() throws Exception {
+        syncFromTestContext();
 
-    @Test(priority = 0)
-    public void IoT_Commands() throws InterruptedException, IOException {
 
         log.info("############### Starting the validation of IoT Commands ################");
         loginAsOperatorUser();
@@ -75,5 +79,6 @@ public class TC07_IoT_Commands extends BaseTest {
 
 
 
+    
     }
 }

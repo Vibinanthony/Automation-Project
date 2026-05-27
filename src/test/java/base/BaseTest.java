@@ -11,8 +11,24 @@ public class BaseTest { // Parent class for all test classes
     public ConfigReader configReader; // ConfigReader object declaration
     public LoginPage loginPage; // LoginPage object declaration
 
-    @BeforeClass // This method runs before the test
+    /**
+     * BDD bridge: wires legacy test class fields from TestContext after Cucumber Hooks start the browser.
+     * Mapping: replaces implicit dependency on @BeforeClass when tests are invoked from step definitions.
+     */
+    public void syncFromTestContext() {
+        this.driver = TestContext.getDriver();
+        this.configReader = TestContext.getConfigReader();
+        this.loginPage = TestContext.getLoginPage();
+        DriverFactory.driver = this.driver;
+    }
+
+    @BeforeClass // This method runs before the test (TestNG-only; skipped when Cucumber manages lifecycle)
     public void setUp() {
+
+        if (TestContext.isCucumberManaged()) {
+            syncFromTestContext();
+            return;
+        }
 
         driver = DriverFactory.initializeDriver(); // Launch browser and store driver object
         configReader = new ConfigReader(); // Create object of ConfigReader class
@@ -40,8 +56,12 @@ public class BaseTest { // Parent class for all test classes
                 loginPage.verifyLogin();
             }
 
-    @AfterClass // This method runs onces after the @Test method
+    @AfterClass // This method runs onces after the @Test method (TestNG-only; skipped when Cucumber manages lifecycle)
     public void tearDown() throws InterruptedException {
+
+        if (TestContext.isCucumberManaged()) {
+            return;
+        }
 
         Thread.sleep(2000); // Wait for 5 seconds before closing browser
 

@@ -1,23 +1,26 @@
-package tests;
+package stepdefinitions;
 
-import base.BaseTest;
-import org.apache.logging.log4j.LogManager;
+import base.BaseTest_Global;
+import io.cucumber.java.en.When;
+import java.time.Duration;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.Test;
+import org.openqa.selenium.WebElement;
 
-import java.time.Duration;
+/**
+ * Migrated from tests.TC05_Dashboard_page — full Selenium logic lives here (no delegation).
+ */
+public class TC05_Dashboard_pageSteps extends BaseTest_Global {
+    private static final Logger log = LogManager.getLogger(TC05_Dashboard_pageSteps.class);
 
-public class TC05_Dashboard_page extends BaseTest {
+    @When("the kiosk dashboard data flow is executed")
+    public void TC05_Dashboard_page() throws Exception {
+        syncFromTestContext();
 
-    private static final Logger log = LogManager.getLogger(TC05_Dashboard_page.class);
-
-    @Test
-    public void TC05_Dashboard_page() throws InterruptedException {
 
         loginAsGlobalUser();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
@@ -179,6 +182,6 @@ public class TC05_Dashboard_page extends BaseTest {
 
 
 
+    
     }
-
 }

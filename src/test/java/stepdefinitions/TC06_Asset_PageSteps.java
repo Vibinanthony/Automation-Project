@@ -1,26 +1,28 @@
-package tests;
+package stepdefinitions;
 
-import base.BaseTest;
+import base.BaseTest_Operator;
+import io.cucumber.java.en.When;
+import java.io.IOException;
+import java.time.Duration;
 import org.apache.commons.io.FileUtils;
-import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-import java.io.IOException;
-import java.time.Duration;
-
 import static base.DriverFactory.driver;
 
-public class TC06_Asset_Page extends BaseTest {
+/**
+ * Migrated from tests.TC06_Asset_Page — full Selenium logic lives here (no delegation).
+ */
+public class TC06_Asset_PageSteps extends BaseTest_Operator {
+    private static final Logger log = LogManager.getLogger(TC06_Asset_PageSteps.class);
 
-    private static final Logger log = LogManager.getLogger(TC06_Asset_Page.class);
+    @When("the asset tab is opened for kiosk info")
+    public void Opening_Asset_Tab() throws Exception {
+        syncFromTestContext();
 
-    @Test(priority = 0)
-    public void Opening_Asset_Tab() throws InterruptedException, IOException {
 
         log.info("############### Starting the 1st validation ################");
         loginAsOperatorUser();
@@ -43,10 +45,12 @@ public class TC06_Asset_Page extends BaseTest {
         log.info("The Manufacturer S/N is passed on the box");
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button//span[starts-with(text(),'GCFOODEXPRNC')])[1]"))).click();
         log.info("The Kiosk Info tab has been opened");
+    
     }
+    @When("the asset tab fields are validated")
+    public void Validate_Asset_Tab() throws Exception {
+        syncFromTestContext();
 
-    @Test(priority = 1)
-    public void Validate_Asset_Tab() throws InterruptedException, IOException {
 
         log.info("############### Starting the 2nd validation & Getting the Field Data from the table and Printing ################");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));   // Explicit Wait
@@ -106,10 +110,12 @@ public class TC06_Asset_Page extends BaseTest {
         String Signal_strength = wait.until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//*[@id=\"rc-tabs-0-panel-kioskInfo\"]/div/main/div[2]/div[1]/div[2]/div[12]/form/div/div/div[2]/div/div"))).getText();
         log.info("Signal Strength : " + Signal_strength);
+    
     }
+    @When("the misc info fields are validated")
+    public void Validate_Misc_Info() throws Exception {
+        syncFromTestContext();
 
-    @Test(priority = 2)
-    public void Validate_Misc_Info() throws InterruptedException, IOException {
 
         log.info("############### Starting the 3rd validation & Getting the Misc Info Data from the table and Printing ################");
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));   // Explicit Wait
@@ -135,9 +141,6 @@ public class TC06_Asset_Page extends BaseTest {
         log.info("Market Provider : " + Market_Provider);
 
 
+    
     }
 }
-
-
-
-

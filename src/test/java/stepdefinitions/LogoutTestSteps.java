@@ -1,27 +1,37 @@
-package tests;
+package stepdefinitions;
 
-import base.BaseTest;
-
+import base.BaseTest_Operator;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class LogoutTest extends BaseTest {
+/**
+ * Migrated from tests.LogoutTest — operator login prerequisite + logout flow.
+ */
+public class LogoutTestSteps extends BaseTest_Operator {
 
-    private static final Logger log = LogManager.getLogger(LoginTest.class);
+    private static final Logger log = LogManager.getLogger(LogoutTestSteps.class);
 
-    @Test
-    public void LogoutTest(){
+    @Given("the operator user is logged in")
+    public void theOperatorUserIsLoggedIn() {
+        syncFromTestContext();
+        performOperatorLogin();
+    }
+
+    @When("the logout flow is executed")
+    public void LogoutTest() {
+        syncFromTestContext();
 
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         String current_url = driver.getCurrentUrl();
 
-        if (current_url.equals("https://pwa.devconnecthq.live/home")){
+        if (current_url.equals("https://pwa.devconnecthq.live/home")) {
 
             wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"profile\"]/button/div[1]/div[1]/span"))).click();
             log.info("User Profile has been clicked");
@@ -32,4 +42,3 @@ public class LogoutTest extends BaseTest {
         }
     }
 }
-

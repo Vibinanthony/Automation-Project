@@ -1,24 +1,27 @@
-package tests;
+package stepdefinitions;
 
-import base.BaseTest;
-import org.apache.logging.log4j.LogManager;
+import org.testng.Assert;
+import base.BaseTest_Global;
+import io.cucumber.java.en.When;
+import java.io.IOException;
+import java.time.Duration;
 import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.IOException;
-import java.time.Duration;
+/**
+ * Migrated from tests.TC01_Settings_Page — full Selenium logic lives here (no delegation).
+ */
+public class TC01_Settings_PageSteps extends BaseTest_Global {
+    private static final Logger log = LogManager.getLogger(TC01_Settings_PageSteps.class);
 
-public class TC01_Settings_Page extends BaseTest {
+    @When("the kiosk settings upload logs flow is executed")
+    public void Kiosk_Settings() throws Exception {
+        syncFromTestContext();
 
-    private static final Logger log = LogManager.getLogger(TC01_Settings_Page.class);
-
-    @Test
-    public void Kiosk_Settings() throws InterruptedException, IOException {
 
         loginAsGlobalUser();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));   // Explicit Wait
@@ -111,5 +114,6 @@ public class TC01_Settings_Page extends BaseTest {
         Assert.assertEquals(popupMessage, "UPLOAD-LOGS command sent successfully");
 
 
+    
     }
 }

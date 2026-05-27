@@ -1,29 +1,31 @@
-package tests;
+package stepdefinitions;
 
-import base.BaseTest;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.Test;
-
+import base.BaseTest_Operator;
+import io.cucumber.java.en.When;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
-
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.WebElement;
 import static base.DriverFactory.driver;
 
-public class TC10_Report extends BaseTest {
+/**
+ * Migrated from tests.TC10_Report — full Selenium logic lives here (no delegation).
+ */
+public class TC10_ReportSteps extends BaseTest_Operator {
+    private static final Logger log = LogManager.getLogger(TC10_ReportSteps.class);
 
-    private static final Logger log = LogManager.getLogger(TC09_Campaign.class);
+    @When("the report flow is executed")
+    public void Report() throws Exception {
+        syncFromTestContext();
 
-    @Test(priority = 0)
-    public void Report() throws InterruptedException, IOException {
 
         log.info("############### Starting the 1st validation ################");
         loginAsOperatorUser();
@@ -75,5 +77,6 @@ public class TC10_Report extends BaseTest {
                 By.id("select-btn"))).click();
 
 
+    
     }
 }
