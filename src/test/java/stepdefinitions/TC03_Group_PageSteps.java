@@ -38,6 +38,7 @@ public class TC03_Group_PageSteps extends BaseTest_Global {
             log.info("The button was not clicked properly, clicked again");
         }
 
+        waitForLoaderToDisappear();  // waiting for spinner to disappear from the UI
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("Name"))).sendKeys("Vibin");
         log.info("The Grouping page is opened and the Name is searched");
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id=\"dropdown-opan-style\"]/div/div/div[2]/div/div/div/main/div[3]/div/div/div/div/div/div/div[2]/table/tbody/tr[2]/td[1]/button/span"))).click();

@@ -40,6 +40,7 @@ public class TC04_Branding_PageSteps extends BaseTest_Global {
                 log.info("The button was not clicked properly, clicked again");
             }
 
+            waitForLoaderToDisappear();  // waiting for spinner to disappear from the UI
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("Manufacturer Serial Number"))).sendKeys("GCKDTYH59OY");
 
            // ===== getting the Branding name from the table and print on console

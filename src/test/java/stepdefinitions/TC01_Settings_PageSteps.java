@@ -40,7 +40,7 @@ public class TC01_Settings_PageSteps extends BaseTest_Global {
             log.info("The button was not clicked properly, clicked again");
         }
 
-        wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("loading-container-for-tab")));
+        waitForLoaderToDisappear();  // waiting for spinner to disappear from the UI
 
         WebElement validate_checkbox = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//span[@class='ant-checkbox']")));
         log.info("Located the checkbox");

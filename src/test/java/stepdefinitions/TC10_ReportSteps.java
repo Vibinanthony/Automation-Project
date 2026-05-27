@@ -44,7 +44,7 @@ public class TC10_ReportSteps extends BaseTest_Operator {
             System.out.println("The button was not clicked properly, clicked again");
         }
 
-
+        waitForLoaderToDisappear();  // waiting for spinner to disappear from the UI
         // Type report name
         WebElement reportInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("basic_reportId")));
         reportInput.sendKeys("Kiosk Sales Cancellation Report");

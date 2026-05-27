@@ -1,15 +1,24 @@
 package base; // Package name
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver; // Import Selenium WebDriver
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
 import pages.LoginPage; // Import LoginPage class
 import utils.ConfigReader; // Import ConfigReader class
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import java.time.Duration;
+import java.util.List;
 
 public class BaseTest { // Parent class for all test classes
 
     public WebDriver driver; // WebDriver variable declaration
     public ConfigReader configReader; // ConfigReader object declaration
     public LoginPage loginPage; // LoginPage object declaration
+    private static final Logger log = LogManager.getLogger(BaseTest.class);
 
     /**
      * BDD bridge: wires legacy test class fields from TestContext after Cucumber Hooks start the browser.
@@ -54,6 +63,18 @@ public class BaseTest { // Parent class for all test classes
                 );
                 loginPage.clickherebutton();
                 loginPage.verifyLogin();
+            }
+            public void waitForLoaderToDisappear() {       // Added the method to validate the spinner on the UI and reused on all the test suite
+
+                WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
+                List<WebElement> loader = driver.findElements(By.id("loading-container-for-tab"));
+
+                if (loader.size() > 0) {
+                    wait.until(ExpectedConditions.invisibilityOfElementLocated(By.id("loading-container-for-tab")));
+                    log.info("Loading spinner disappeared");
+                } else {
+                    log.info("No loading spinner present");
+                }
             }
 
     @AfterClass // This method runs onces after the @Test method (TestNG-only; skipped when Cucumber manages lifecycle)
