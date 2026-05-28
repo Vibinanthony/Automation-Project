@@ -39,3 +39,5 @@ build/
 
 ### text ###
 logs/
+*.log
+logs/

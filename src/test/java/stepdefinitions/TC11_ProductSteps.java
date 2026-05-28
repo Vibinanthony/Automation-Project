@@ -41,6 +41,7 @@ public class TC11_ProductSteps extends BaseTest_Operator {
             System.out.println("The button was not clicked properly, clicked again");
         }
 
+        waitForLoaderToDisappear();  // waiting for spinner to disappear from the UI
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@id='Name']"))).sendKeys("12 oz Bowls");
         log.info("The 12 oz Bowls has been sent to the search box");
         wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(@class,'ant-btn-link') and .//span[contains(.,'12 oz Bowls')]]"))).click();

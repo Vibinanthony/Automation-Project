@@ -40,6 +40,7 @@ public class TC05_Dashboard_pageSteps extends BaseTest_Global {
             log.info("The button was not clicked properly, clicked again");
         }
 
+        waitForLoaderToDisappear();  // waiting for spinner to disappear from the UI
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("search-input"))).sendKeys("GCKDTYH59OY");
         log.info("The S/N is passed on the box");
 

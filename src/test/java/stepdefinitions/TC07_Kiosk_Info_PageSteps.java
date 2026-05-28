@@ -42,9 +42,10 @@ public class TC07_Kiosk_Info_PageSteps extends BaseTest_Operator {
             System.out.println("The button was not clicked properly, clicked again");
         }
 
+        waitForLoaderToDisappear();  // waiting for spinner to disappear from the UI
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("Manufacturer Serial Number"))).sendKeys("GCKDTYH59OY");
         log.info("The Manufacturer S/N is passed on the box");
-        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button//span[starts-with(text(),'GCFOODEXPRNC')])[1]"))).click();
+        wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(//button//span[starts-with(text(),'GCFOODEXAL00')])[1]"))).click();
         log.info("The Kiosk Info tab has been opened");
 
         String currentBranding = wait.until(ExpectedConditions.visibilityOfElementLocated(

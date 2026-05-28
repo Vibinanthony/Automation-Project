@@ -41,6 +41,8 @@ public class TC02_Assignment_PageSteps extends BaseTest_Global {
             log.info("The button was not clicked properly, clicked again");
         }
 
+        waitForLoaderToDisappear();  // waiting for spinner to disappear from the UI
+
         wait.until(ExpectedConditions.elementToBeClickable(By.id("assign-operator-btn"))).click();
         log.info("The Assign Operator button has been clicked");
 
