@@ -84,13 +84,6 @@ public class BaseTest { // Parent class for all test classes
             return;
         }
 
-    @AfterClass // This method runs onces after the @Test method (TestNG-only; skipped when Cucumber manages lifecycle)
-    public void tearDown() throws InterruptedException {
-
-        if (TestContext.isCucumberManaged()) {
-            return;
-        }
-
         Thread.sleep(2000); // Wait for 5 seconds before closing browser
 
         if (driver != null) { // Check if driver is not null

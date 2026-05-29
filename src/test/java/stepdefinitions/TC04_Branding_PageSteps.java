@@ -39,11 +39,8 @@ public class TC04_Branding_PageSteps extends BaseTest_Global {
                 wait.until(ExpectedConditions.elementToBeClickable(By.id("branding"))).click();
                 log.info("The button was not clicked properly, clicked again");
             }
-
-<<<<<<< bugfix/fix-syncronization-new-elements-fix
+            
             waitForLoaderToDisappear();  // waiting for spinner to disappear from the UI
-=======
->>>>>>> development
             wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("Manufacturer Serial Number"))).sendKeys("GCKDTYH59OY");
 
            // ===== getting the Branding name from the table and print on console
