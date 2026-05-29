@@ -32,6 +32,18 @@ pipeline {
 
     post {
 
+        always {
+
+                    publishHTML([
+                        allowMissing: true,
+                        alwaysLinkToLastBuild: true,
+                        keepAll: true,
+                        reportDir: 'target/cucumber-reports',
+                        reportFiles: 'index.html',
+                        reportName: 'CHQ Automation Report'
+                    ])
+                }
+
         success {
             echo 'Pipeline executed successfully.'
         }
