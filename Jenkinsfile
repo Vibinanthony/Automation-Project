@@ -25,7 +25,7 @@ pipeline {
 
                 echo 'Running Maven build using pom.xml...'
 
-                sh 'mvn clean test -f pom.xml'
+                bat 'mvn clean test -f pom.xml'
             }
         }
     }
